@@ -29,7 +29,16 @@
   @media print {
     body { padding: 0; }
     .poster { box-shadow: none !important; }
+    .dl { display: none; }
   }
+
+  .dl {
+    position: fixed; top: 14px; right: 14px; z-index: 10;
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 1px;
+    background: rgba(20,19,17,0.85); border: 1px solid rgba(232,230,223,0.3);
+    padding: 8px 12px; border-radius: 3px; text-decoration: none !important;
+  }
+  .dl:hover { border-color: rgba(232,230,223,0.7); }
 
   .poster {
     width: 1414px;
@@ -45,6 +54,8 @@
 </style>
 </head>
 <body>
+
+<a class="dl" href="hypothesis-surface-poster.pdf">Download PDF</a>
 
 <div class="poster">
 
