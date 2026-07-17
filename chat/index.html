@@ -22,9 +22,14 @@
     font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(232,230,223,0.55);
     border: 1px solid rgba(232,230,223,0.3); padding: 3px 8px; border-radius: 2px;
   }
-  .frame-wrap { border: 1px solid rgba(232,230,223,0.2); border-radius: 3px; overflow: hidden; }
-  iframe { display: block; width: 100%; height: 620px; border: 0; }
-  .meta { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 1px; color: rgba(232,230,223,0.4); margin-top: 12px; }
+  .join {
+    display: inline-flex; align-items: center; gap: 10px; margin-top: 8px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 1px;
+    background: rgba(232,230,223,0.08); border: 1px solid rgba(232,230,223,0.35);
+    padding: 14px 22px; border-radius: 3px; text-decoration: none !important;
+  }
+  .join:hover { background: rgba(232,230,223,0.14); border-color: rgba(232,230,223,0.6); }
+  .meta { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 1px; color: rgba(232,230,223,0.4); margin-top: 16px; }
 </style>
 </head>
 <body>
@@ -33,10 +38,8 @@
     <div class="kicker">AGI-26 &middot; San Francisco &middot; 2026</div>
     <h1>Chat</h1>
     <div class="experimental">Experimental &middot; not a final feature</div>
-    <p class="note">A persistent IRC channel for work on the Hypothesis Surface and the OmegaClaw line — <strong>##sketched_agi-26</strong> on <a href="https://libera.chat/">Libera.Chat</a>. No password needed — a random name is filled in for you; keep it or type your own, then hit Start. Nothing here is moderated or archived by this site; it's a plain window onto the channel.</p>
-    <div class="frame-wrap">
-      <iframe src="https://kiwiirc.com/nextclient/irc.libera.chat/##sketched_agi-26" title="##sketched_agi-26 on Libera.Chat" loading="lazy" allow="clipboard-write"></iframe>
-    </div>
+    <p class="note">A persistent IRC channel for work on the Hypothesis Surface and the OmegaClaw line — <strong>##sketched_agi-26</strong> on <a href="https://libera.chat/">Libera.Chat</a>. No password needed — just a name. Opens Libera's own webchat in a new tab: we tried embedding a third-party client directly on this page, but it was unreliable, so this links straight to the one that actually works every time.</p>
+    <a class="join" href="https://web.libera.chat/##sketched_agi-26" target="_blank" rel="noopener">Join ##sketched_agi-26 &nearr;</a>
     <div class="meta">irc.libera.chat &middot; ##sketched_agi-26 &middot; TLS port 6697 if you'd rather use your own client</div>
   </div>
 </body>
