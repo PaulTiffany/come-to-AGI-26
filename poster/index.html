@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Hypothesis Surface — AGI-26 Poster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Fredericka+the+Great&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #0c0d0c; }
+  a { color: #e8e6df; text-decoration: underline; }
+  a:hover { color: #ffffff; }
+
+  /* Screen: center the A0 canvas with room to scroll/zoom. */
+  body {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+  }
+
+  /*
+    Print: page geometry matches the canvas's native px dimensions 1:1 —
+    same technique the source design tool's own auto-print pipeline uses
+    (see Board System export script: @page{size:<frame width>px <frame height>px}).
+    A large-format print vendor scales this to the true 841×1189mm (A0)
+    sheet at RIP time, same as the vinyl/board fabrication in production/.
+  */
+  @page { size: 1414px 2000px; margin: 0; }
+  @media print {
+    body { padding: 0; }
+    .poster { box-shadow: none !important; }
+  }
+
+  .poster {
+    width: 1414px;
+    height: 2000px;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse 120% 90% at 50% 38%, #1b1e1c 0%, #151816 45%, #101211 78%, #0b0d0c 100%);
+    color: #e8e6df;
+    font-family: 'Oswald', sans-serif;
+    flex: none;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+</style>
+</head>
+<body>
+
+<div class="poster">
+
+  <!-- erased-chalk atmosphere -->
+  <div style="position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 420px 180px at 22% 62%, rgba(232,230,223,0.045) 0%, transparent 70%), radial-gradient(ellipse 520px 220px at 74% 74%, rgba(232,230,223,0.035) 0%, transparent 70%), radial-gradient(ellipse 380px 150px at 58% 30%, rgba(232,230,223,0.03) 0%, transparent 70%);"></div>
+
+  <!-- silkscreened frame -->
+  <div style="position: absolute; inset: 34px; border: 2px solid rgba(232,230,223,0.28); pointer-events: none;"></div>
+  <div style="position: absolute; inset: 42px; border: 1px solid rgba(232,230,223,0.10); pointer-events: none;"></div>
+
+  <!-- LEFT RAIL · operational spine (facing inward: reads upward) -->
+  <div style="position: absolute; left: 56px; top: 680px; writing-mode: vertical-rl; transform: rotate(180deg); font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 4px; color: rgba(232,230,223,0.300); pointer-events: none;">CLAIMS CARRY FIBERS</div>
+  <div style="position: absolute; left: 56px; top: 1020px; writing-mode: vertical-rl; transform: rotate(180deg); font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 4px; color: rgba(232,230,223,0.250); pointer-events: none;">CONFLICT YIELDS CERTIFICATES</div>
+  <div style="position: absolute; left: 56px; top: 1440px; writing-mode: vertical-rl; transform: rotate(180deg); font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 4px; color: rgba(232,230,223,0.280); pointer-events: none;">VOIDS GENERATE HYPOTHESES</div>
+
+  <!-- RIGHT RAIL · integrability conditions (reads downward) -->
+  <div style="position: absolute; right: 54px; top: 680px; writing-mode: vertical-rl; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 4px; color: rgba(232,230,223,0.300); pointer-events: none;">NO BARE CLAIMS</div>
+  <div style="position: absolute; right: 54px; top: 980px; writing-mode: vertical-rl; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 4px; color: rgba(232,230,223,0.250); pointer-events: none;">ANTI-MASKING&nbsp;&nbsp;&nbsp;σ̂ ≤ σ + δ</div>
+  <div style="position: absolute; right: 54px; top: 1380px; writing-mode: vertical-rl; font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 4px; color: rgba(232,230,223,0.280); pointer-events: none;">CERTIFICATES&nbsp;&nbsp;&nbsp;TORSION / NON-TORSION</div>
+
+  <!-- ===== permanent identity: top ===== -->
+  <div style="position: absolute; top: 96px; left: 0; right: 0; display: flex; flex-direction: column; align-items: center;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: 23px; letter-spacing: 10px; color: rgba(232,230,223,0.62); margin-bottom: 34px;">AGI-26 · SAN FRANCISCO</div>
+    <div style="font-weight: 300; font-size: 58px; letter-spacing: 30px; line-height: 1; color: rgba(232,230,223,0.92); text-indent: 30px;">THE</div>
+    <div style="font-weight: 600; font-size: 158px; letter-spacing: 14px; line-height: 1.04; color: #f2f0e9; text-indent: 14px; text-shadow: 0 0 32px rgba(242,240,233,0.12);">HYPOTHESIS</div>
+    <div style="font-weight: 600; font-size: 158px; letter-spacing: 46px; line-height: 1.0; color: #f2f0e9; text-indent: 46px; text-shadow: 0 0 32px rgba(242,240,233,0.12); margin-top: 6px;">SURFACE</div>
+  </div>
+
+  <!-- ===== H.1: COME + its chalk fiber enclosure, upon the void ===== -->
+  <div style="position: absolute; top: 606px; left: 0; right: 0; display: flex; flex-direction: column; align-items: center;">
+    <div style="position: relative; transform: rotate(-1.4deg);">
+      <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 1180px; height: 480px; background: radial-gradient(ellipse 50% 48% at 50% 50%, rgba(240,238,230,0.075) 0%, transparent 68%); pointer-events: none;"></div>
+      <!-- hand-drawn fiber: irregular, uneven density, never a box -->
+      <div style="position: absolute; left: -70px; top: -52px; right: -84px; bottom: -46px; border: 3.5px solid rgba(232,230,223,0.200); border-radius: 47% 53% 45% 55% / 61% 43% 59% 41%; filter: blur(0.7px); transform: rotate(1.1deg); pointer-events: none;"></div>
+      <div style="position: absolute; left: -48px; top: -32px; right: -60px; bottom: -28px; border: 2.5px solid rgba(232,230,223,0.120); border-radius: 53% 47% 56% 44% / 45% 59% 41% 57%; filter: blur(1px); transform: rotate(-1.7deg); border-top-color: transparent; pointer-events: none;"></div>
+      <div style="position: relative; display: flex; align-items: baseline; font-family: 'Fredericka the Great', serif; font-size: 330px; line-height: 1; color: #ffffff; text-shadow: 0 0 14px rgba(255,255,255,0.30), 0 0 64px rgba(255,255,255,0.11), 2px 2px 0 rgba(255,255,255,0.05);">
+        <span style="display: inline-block; transform: rotate(1.3deg) translateY(-7px);">C</span>
+        <span style="display: inline-block; transform: rotate(-1deg) translateY(5px);">O</span>
+        <span style="display: inline-block; transform: rotate(0.9deg) translateY(-4px);">M</span>
+        <span style="display: inline-block; transform: rotate(-1.5deg) translateY(6px);">E</span>
+      </div>
+    </div>
+    <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 300; font-size: 20px; letter-spacing: 5px; color: rgba(232,230,223,0.34); margin-top: 52px;">A SUBSTRATE FOR STRUCTURED SILENCE AND IMAGINATION.</div>
+  </div>
+
+  <!-- ===== permanent identity: bottom ===== -->
+  <div style="position: absolute; left: 96px; right: 96px; bottom: 84px; display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;">
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div style="width: 620px; height: 1px; background: rgba(232,230,223,0.35);"></div>
+      <div style="font-weight: 400; font-size: 34px; letter-spacing: 5px; color: rgba(242,240,233,0.95);">AN OPERATIONAL EPISTEMOLOGY FOR AUTONOMOUS RESEARCH</div>
+      <div style="font-weight: 300; font-size: 30px; letter-spacing: 4px; color: rgba(232,230,223,0.78);">PAUL CARVER TIFFANY III</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 300; font-size: 21px; letter-spacing: 6px; color: rgba(232,230,223,0.50); margin-top: 6px;">AGI-26 · SAN FRANCISCO · 2026</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 300; font-size: 15px; letter-spacing: 4px; color: rgba(232,230,223,0.32);">μ&nbsp;&nbsp;0.36 → 0.00&nbsp;&nbsp;·&nbsp;&nbsp;TEXT-COMPUTABLE&nbsp;&nbsp;·&nbsp;&nbsp;JUDGE-FREE</div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+      <div style="width: 118px; height: 118px; border: 1px solid rgba(232,230,223,0.4); background: repeating-linear-gradient(45deg, rgba(232,230,223,0.10) 0px, rgba(232,230,223,0.10) 6px, transparent 6px, transparent 12px); display: flex; align-items: center; justify-content: center;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: rgba(232,230,223,0.55);">QR</div>
+      </div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 300; font-size: 15px; letter-spacing: 3px; color: rgba(232,230,223,0.45);">PAPER</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
