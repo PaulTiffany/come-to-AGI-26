@@ -13,6 +13,8 @@
   &nbsp;|&nbsp;
   <a href="tour/"><strong>Tour</strong></a>
   &nbsp;|&nbsp;
+  <a href="chat/"><strong>Chat</strong></a>
+  &nbsp;|&nbsp;
   <a href="https://paultiffany.github.io/"><strong>About the author</strong></a>
 </p>
 
