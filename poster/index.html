@@ -33,12 +33,14 @@
   }
 
   .dl {
-    position: fixed; top: 14px; right: 14px; z-index: 10;
+    position: fixed; top: 14px; right: 14px; z-index: 10; display: flex; gap: 8px;
     font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 1px;
+  }
+  .dl a {
     background: rgba(20,19,17,0.85); border: 1px solid rgba(232,230,223,0.3);
     padding: 8px 12px; border-radius: 3px; text-decoration: none !important;
   }
-  .dl:hover { border-color: rgba(232,230,223,0.7); }
+  .dl a:hover { border-color: rgba(232,230,223,0.7); }
 
   .poster {
     width: 1414px;
@@ -55,7 +57,11 @@
 </head>
 <body>
 
-<a class="dl" href="hypothesis-surface-poster.pdf">Download PDF</a>
+<div class="dl">
+  <a href="hypothesis-surface-poster.pdf">A0 PDF</a>
+  <a href="hypothesis-surface-poster-letter.pdf">Letter PDF</a>
+  <a href="light/">Light version &rarr;</a>
+</div>
 
 <div class="poster">
 
