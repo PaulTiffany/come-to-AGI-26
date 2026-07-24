@@ -1,0 +1,21 @@
+{
+  "ai_used": false,
+  "concept_confidence": "heuristic",
+  "concept_kind": "array_basics",
+  "concept_title": "NumPy Array Basics",
+  "input_sha256": "1504ae0851df951aaa84b550c55694246928b29d1e8c7d36e8db5a9162e91dae",
+  "notebook_ran": false,
+  "notebook_sha256": "422de69e3eea57faafdcc5ab66d23f2ec7e584bf6f405a7f30bebaf022185208",
+  "policy_allowed_imports": [
+    "time",
+    "dataclasses",
+    "typing",
+    "numpy"
+  ],
+  "policy_blocked_imports": [],
+  "policy_ok": true,
+  "schema_version": "1",
+  "signed_at": "2026-07-24T10:18:11.660732+00:00",
+  "source_ran": false,
+  "validation_passed": false
+}

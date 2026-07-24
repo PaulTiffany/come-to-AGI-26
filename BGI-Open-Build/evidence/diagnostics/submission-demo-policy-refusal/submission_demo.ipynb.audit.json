@@ -1,0 +1,42 @@
+{
+  "compiled_at_utc": "2026-07-24T10:25:01.212899+00:00",
+  "concept_kind": "array_basics",
+  "duration_seconds": 0.0,
+  "execution_succeeded": false,
+  "exit_code": -1,
+  "generated_sections": [
+    "title",
+    "learning_objective",
+    "original_code",
+    "explanation",
+    "execution_trace",
+    "validation",
+    "exercise",
+    "selected_answer"
+  ],
+  "input_path": "C:\\src\\compitum-fabricpc\\experiments\\fabricpc\\submission_demo.py",
+  "notebook_duration_seconds": 0.0,
+  "notebook_execution": "not_run",
+  "notebook_exit_code": null,
+  "notebook_timed_out": false,
+  "output_path": "C:\\src\\notebook_compiler\\local_artifacts\\bellman-shadow-pricing\\notebooks\\submission_demo.ipynb",
+  "policy_allowed_imports": [
+    "pathlib",
+    "numpy"
+  ],
+  "policy_blocked": true,
+  "policy_blocked_imports": [
+    "sys",
+    "compitum"
+  ],
+  "policy_reason": "sys (explicitly blocked); compitum (not in allow list)",
+  "schema_version": "2",
+  "sections_meta": {},
+  "source_execution": "skipped",
+  "timed_out": false,
+  "title": "NumPy Array Basics",
+  "validation_duration_seconds": 0.0,
+  "validation_status": "skipped",
+  "validation_stderr": "",
+  "validation_stdout": ""
+}

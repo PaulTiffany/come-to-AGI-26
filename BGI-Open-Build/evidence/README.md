@@ -1,5 +1,26 @@
 # Evidence upload contract
 
+## Deposit status
+
+The finalized Bellman shadow-pricing evidence was deposited on 2026-07-24.
+
+- Notebook Compiler base revision: `a6fcc3fd26348545b63e47ba77aba58f0d652066`
+  (`feat/show-certificate`, with the accepted local evidence patches recorded by the
+  uploaded source and artifact hashes)
+- Compitum submission branch: `submission/bellman-shadow-pricing`
+- Compitum submission commit: `d4c0bbd103849b8afb1019921684a062482d08cc`
+- Research tag: `fabricpc-compitum-shadow-pricing-v1`
+- Research commit: `617f8979daa921d326301266e55740c0746ab95c`
+- FabricPC commit: `32ae295182ab944b8f084abaf4a40da2c50bab5f`
+- Deterministic transfer bundle SHA-256:
+  `6b48262f49e6cad498a23ff6e075f1f8522e831004f8cb3dbaeecfe46e28dc05`
+- Validation command:
+  `python BGI-Open-Build/evidence/validate_evidence.py`
+
+The generated audits retain the explicitly declared `C:\src\...` compilation roots as
+machine provenance. No username, credential, token, API key, or private configuration is
+present, and the public site does not depend on those local paths.
+
 This directory is the public evidence surface for the finalized local Notebook Compiler bundle.
 
 ## Required index

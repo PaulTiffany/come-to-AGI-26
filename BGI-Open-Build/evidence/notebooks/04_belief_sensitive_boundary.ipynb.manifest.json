@@ -1,0 +1,19 @@
+{
+  "classes": [],
+  "concept_confidence": "heuristic",
+  "concept_kind": "generic_python",
+  "execution_attempted": true,
+  "execution_succeeded": true,
+  "functions": [],
+  "has_main_guard": false,
+  "imports": [
+    "compitum.regret_lab.belief_bellman_v2"
+  ],
+  "language": "python",
+  "policy_blocked": false,
+  "schema_version": "2",
+  "source_sha256": "6bd2ca914aa1d6f4f1ffdba9daf90099a3d0054c677bbf444b228a6ca5d7b370",
+  "syntax_ok": true,
+  "timed_out": false,
+  "top_level_statement_count": 25
+}
