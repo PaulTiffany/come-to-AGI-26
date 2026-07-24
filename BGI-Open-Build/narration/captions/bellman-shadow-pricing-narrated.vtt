@@ -1,0 +1,58 @@
+WEBVTT
+
+00:00:00.200 --> 00:00:02.801
+Matt: Compitum routes under hard resource limits.
+
+00:00:03.150 --> 00:00:06.203
+Matt: It had shadow prices, but did not let them choose.
+
+00:00:07.100 --> 00:00:11.280
+Ellie: FabricPC asked: can hidden scarcity become a routing price?
+
+00:00:11.650 --> 00:00:14.738
+Ellie: The proposed chain ended with price choosing action.
+
+00:00:15.150 --> 00:00:16.613
+Matt: But the final link broke.
+
+00:00:17.000 --> 00:00:22.190
+Matt: Even exact belief failed when one local price was multiplied by a lumpy action.
+
+00:00:22.550 --> 00:00:27.697
+Matt: The predictor was not the whole problem. The steering rule itself was wrong.
+
+00:00:28.200 --> 00:00:30.557
+Ellie: The correction prices the whole action.
+
+00:00:30.750 --> 00:00:34.790
+Ellie: It compares future value before spending with future value after spending.
+
+00:00:35.000 --> 00:00:40.689
+Ellie: The discrete unit charges telescope to the same two lookups: exact charge, not a tangent.
+
+00:00:42.150 --> 00:00:47.618
+Matt: Immediate utility minus action charge now ranks choices exactly like Bellman.
+
+00:00:48.150 --> 00:00:52.542
+Matt: Certified choices and utility matched. Mismatches: zero.
+
+00:00:54.050 --> 00:00:55.571
+Ellie: Belief still matters.
+
+00:00:56.000 --> 00:01:02.513
+Ellie: At one reachable state, belief point zero five selects spend; point two zero selects opportunity.
+
+00:01:02.850 --> 00:01:05.961
+Ellie: This proves an action change, not the threshold.
+
+00:01:06.300 --> 00:01:09.748
+Matt: The fixed FabricPC predictor did not clear its gate.
+
+00:01:10.000 --> 00:01:16.269
+Matt: Predictive coding tied backprop at point three one four: fifteen point four percent of the recoverable gap.
+
+00:01:17.050 --> 00:01:20.220
+Ellie: The intervention restored exact action pricing.
+
+00:01:20.650 --> 00:01:23.649
+Ellie: The model lost. The experiment succeeded.

@@ -1,0 +1,278 @@
+{
+    "schema":  "bgi-open-build.offline-narration.v1",
+    "render_timestamp":  "2026-07-24T12:46:11.619849+00:00",
+    "source_commit":  "c85b6073f91f8ba87c07669641841a307640b677",
+    "python_version":  "3.13.4",
+    "ffmpeg_version":  "ffmpeg version 8.0-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers",
+    "engine":  {
+                   "name":  "Piper",
+                   "version":  "1.4.2",
+                   "source":  "https://github.com/OHF-Voice/piper1-gpl",
+                   "license":  "GPL-3.0",
+                   "redistributed":  false
+               },
+    "voices":  {
+                   "Matt":  {
+                                "model":  "en_GB-cori-medium.onnx",
+                                "sha256":  "1899f98e5fb8310154f3c2973f4b8a929ba7245e722b3d3a85680b833d95f10d",
+                                "length_scale":  1.08,
+                                "model_repository_license":  "MIT",
+                                "dataset_license":  "public domain",
+                                "model_card":  "https://huggingface.co/rhasspy/piper-voices/blob/v1.0.0/en/en_GB/cori/medium/MODEL_CARD",
+                                "language":  "en_GB"
+                            },
+                   "Ellie":  {
+                                 "model":  "en_US-kristin-medium.onnx",
+                                 "sha256":  "5849957f929cbf720c258f8458692d6103fff2f0e3d3b19c8259474bb06a18d4",
+                                 "length_scale":  0.98,
+                                 "model_repository_license":  "MIT",
+                                 "dataset_license":  "public domain",
+                                 "model_card":  "https://huggingface.co/rhasspy/piper-voices/blob/main/en/en_US/kristin/medium/MODEL_CARD",
+                                 "language":  "en_US"
+                             }
+               },
+    "silent_video":  {
+                         "file":  "../media/bellman-shadow-pricing.mp4",
+                         "sha256":  "ed1c8906e9f6c662f50a0f58a44defa2ba2515c3173fc321c5a945632d20d01b"
+                     },
+    "script":  {
+                   "file":  "script.json",
+                   "sha256":  "b0cc6923dd6c4b9134b546027a8646480163aa7ff1af9ba1d5b9762b80f34975"
+               },
+    "segments":  [
+                     {
+                         "id":  "01",
+                         "speaker":  "Matt",
+                         "start":  0.2,
+                         "duration":  2.601,
+                         "text":  "Compitum routes under hard resource limits.",
+                         "spoken_text":  "Compitum routes under hard resource limits.",
+                         "file":  "audio/segments/01-matt.wav",
+                         "sha256":  "0a236cdb7d822a369dab73a32f4953245bc700fd89dc3323f0ac9fb697d5a17c"
+                     },
+                     {
+                         "id":  "02",
+                         "speaker":  "Matt",
+                         "start":  3.15,
+                         "duration":  3.053,
+                         "text":  "It had shadow prices, but did not let them choose.",
+                         "spoken_text":  "It had shadow prices, but did not let them choose.",
+                         "file":  "audio/segments/02-matt.wav",
+                         "sha256":  "3ead6b88e7e84c7df46ff36cef45919bae3870f97294901484f02002a715e582"
+                     },
+                     {
+                         "id":  "03",
+                         "speaker":  "Ellie",
+                         "start":  7.1,
+                         "duration":  4.18,
+                         "text":  "FabricPC asked: can hidden scarcity become a routing price?",
+                         "spoken_text":  "Fabric P C asked: can hidden scarcity become a routing price?",
+                         "file":  "audio/segments/03-ellie.wav",
+                         "sha256":  "02b85f94f86cc0a149acef9236aef726734d096a304446c435e7a0b720bad13c"
+                     },
+                     {
+                         "id":  "04",
+                         "speaker":  "Ellie",
+                         "start":  11.65,
+                         "duration":  3.088,
+                         "text":  "The proposed chain ended with price choosing action.",
+                         "spoken_text":  "The proposed chain ended with price choosing action.",
+                         "file":  "audio/segments/04-ellie.wav",
+                         "sha256":  "efa72e4806fb625aa323a507a4c158122edb8289f91c62da0a0b621d54e1f65a"
+                     },
+                     {
+                         "id":  "05",
+                         "speaker":  "Matt",
+                         "start":  15.15,
+                         "duration":  1.463,
+                         "text":  "But the final link broke.",
+                         "spoken_text":  "But the final link broke.",
+                         "file":  "audio/segments/05-matt.wav",
+                         "sha256":  "bd0264dc20cf1c40b703ff0ee7daf317c04219bb400db6aab3f72c794efd88d2"
+                     },
+                     {
+                         "id":  "06",
+                         "speaker":  "Matt",
+                         "start":  17,
+                         "duration":  5.19,
+                         "text":  "Even exact belief failed when one local price was multiplied by a lumpy action.",
+                         "spoken_text":  "Even exact belief failed when one local price was multiplied by a lumpy action.",
+                         "file":  "audio/segments/06-matt.wav",
+                         "sha256":  "7afd0a3cdca0c2913d70a7909e1cfca0acad4edb2773fdbc303e7b3d420f97a4"
+                     },
+                     {
+                         "id":  "07",
+                         "speaker":  "Matt",
+                         "start":  22.55,
+                         "duration":  5.147,
+                         "text":  "The predictor was not the whole problem. The steering rule itself was wrong.",
+                         "spoken_text":  "The predictor was not the whole problem. The steering rule itself was wrong.",
+                         "file":  "audio/segments/07-matt.wav",
+                         "sha256":  "a0837f7235979e31f8d0a70a62dbb3d82d3518cba01f9716cf4159ba7da705e9"
+                     },
+                     {
+                         "id":  "08",
+                         "speaker":  "Ellie",
+                         "start":  28.2,
+                         "duration":  2.357,
+                         "text":  "The correction prices the whole action.",
+                         "spoken_text":  "The correction prices the whole action.",
+                         "file":  "audio/segments/08-ellie.wav",
+                         "sha256":  "d57deb38188be161f48442a702deb332db1f3272a3df7ea21c76017d4cf85106"
+                     },
+                     {
+                         "id":  "09",
+                         "speaker":  "Ellie",
+                         "start":  30.75,
+                         "duration":  4.04,
+                         "text":  "It compares future value before spending with future value after spending.",
+                         "spoken_text":  "It compares future value before spending with future value after spending.",
+                         "file":  "audio/segments/09-ellie.wav",
+                         "sha256":  "ef7a5e6bbb1fd54a7d9c03aaebb6af115e878ab12009b283d04f071f9ef62c50"
+                     },
+                     {
+                         "id":  "10",
+                         "speaker":  "Ellie",
+                         "start":  35,
+                         "duration":  5.689,
+                         "text":  "The discrete unit charges telescope to the same two lookups: exact charge, not a tangent.",
+                         "spoken_text":  "The discrete unit charges telescope to the same two lookups: exact charge, not a tangent.",
+                         "file":  "audio/segments/10-ellie.wav",
+                         "sha256":  "885287dc2bc6b81572090eb27a31961d69c4fce48ffb92f7a9fd9da814ce4712"
+                     },
+                     {
+                         "id":  "11",
+                         "speaker":  "Matt",
+                         "start":  42.15,
+                         "duration":  5.468,
+                         "text":  "Immediate utility minus action charge now ranks choices exactly like Bellman.",
+                         "spoken_text":  "Immediate utility minus action charge now ranks choices exactly like Bellman.",
+                         "file":  "audio/segments/11-matt.wav",
+                         "sha256":  "d9c6543d1c965b2289e05656641628584f0d196fd103d04900ebe371893f5821"
+                     },
+                     {
+                         "id":  "12",
+                         "speaker":  "Matt",
+                         "start":  48.15,
+                         "duration":  4.392,
+                         "text":  "Certified choices and utility matched. Mismatches: zero.",
+                         "spoken_text":  "Certified choices and utility matched. Mismatches: zero.",
+                         "file":  "audio/segments/12-matt.wav",
+                         "sha256":  "18a3d50ff9a0362b02ac3e0204e8ecc570191644769f451014572fc960c28a4e"
+                     },
+                     {
+                         "id":  "13",
+                         "speaker":  "Ellie",
+                         "start":  54.05,
+                         "duration":  1.521,
+                         "text":  "Belief still matters.",
+                         "spoken_text":  "Belief still matters.",
+                         "file":  "audio/segments/13-ellie.wav",
+                         "sha256":  "551510f74aec3b439577df87aa3975fd7fa67c82cb8254330e537e780eae7df2"
+                     },
+                     {
+                         "id":  "14",
+                         "speaker":  "Ellie",
+                         "start":  56,
+                         "duration":  6.513,
+                         "text":  "At one reachable state, belief point zero five selects spend; point two zero selects opportunity.",
+                         "spoken_text":  "At one reachable state, belief point zero five selects spend; point two zero selects opportunity.",
+                         "file":  "audio/segments/14-ellie.wav",
+                         "sha256":  "1f58bfbb7579fdba3c2543b74329dbc8fa5868de8a735bed3c96d954d2e0e53b"
+                     },
+                     {
+                         "id":  "15",
+                         "speaker":  "Ellie",
+                         "start":  62.85,
+                         "duration":  3.111,
+                         "text":  "This proves an action change, not the threshold.",
+                         "spoken_text":  "This proves an action change, not the threshold.",
+                         "file":  "audio/segments/15-ellie.wav",
+                         "sha256":  "3c7b430daaeb3d136ddb82ea548958c2b6c9abfc1ce06e76595f607d6b1bd178"
+                     },
+                     {
+                         "id":  "16",
+                         "speaker":  "Matt",
+                         "start":  66.3,
+                         "duration":  3.448,
+                         "text":  "The fixed FabricPC predictor did not clear its gate.",
+                         "spoken_text":  "The fixed Fabric P C predictor did not clear its gate.",
+                         "file":  "audio/segments/16-matt.wav",
+                         "sha256":  "c5dad733e6bc14008d0934081bfaa24c18d5494e3f8f4f1bcbe512b49f957c8b"
+                     },
+                     {
+                         "id":  "17",
+                         "speaker":  "Matt",
+                         "start":  70,
+                         "duration":  6.269,
+                         "text":  "Predictive coding tied backprop at point three one four: fifteen point four percent of the recoverable gap.",
+                         "spoken_text":  "Predictive coding tied back prop at point three one four: fifteen point four percent of the recoverable gap.",
+                         "file":  "audio/segments/17-matt.wav",
+                         "sha256":  "4d768ee9d66838d112a29b763cfcd8c5c15c6ed0c25a6aaee2e914db9539022b"
+                     },
+                     {
+                         "id":  "18",
+                         "speaker":  "Ellie",
+                         "start":  77.05,
+                         "duration":  3.17,
+                         "text":  "The intervention restored exact action pricing.",
+                         "spoken_text":  "The intervention restored exact action pricing.",
+                         "file":  "audio/segments/18-ellie.wav",
+                         "sha256":  "4e17bac5366a3e8a9dd380c2851d8e25f3a1906939dfce0a17a298f05c2a1347"
+                     },
+                     {
+                         "id":  "19",
+                         "speaker":  "Ellie",
+                         "start":  80.65,
+                         "duration":  2.999,
+                         "text":  "The model lost. The experiment succeeded.",
+                         "spoken_text":  "The model lost. The experiment succeeded.",
+                         "file":  "audio/segments/19-ellie.wav",
+                         "sha256":  "18f459457baf864561cc9bd442559ab3c27c72a3e9db5e02ec9ed7af19ac148b"
+                     }
+                 ],
+    "audio_master":  {
+                         "file":  "audio/bellman-shadow-pricing-narration.wav",
+                         "sha256":  "b6d7d3eeb5b3273cb19e5f225c1d961b2367740e0dc896dcec3b96873f84adcf"
+                     },
+    "captions":  {
+                     "srt":  {
+                                 "file":  "captions/bellman-shadow-pricing-narrated.srt",
+                                 "sha256":  "5329fcbdd8ba593fedccce517ec216e01252167ce6423fc729b8fa975b74e5e3"
+                             },
+                     "vtt":  {
+                                 "file":  "captions/bellman-shadow-pricing-narrated.vtt",
+                                 "sha256":  "3a33ac8137c715d283b8abed173960b030e14cc941d40c7a7055150164d96156"
+                             }
+                 },
+    "narrated_video":  {
+                           "file":  "../media/bellman-shadow-pricing-narrated.mp4",
+                           "sha256":  "357f2de098623a892e363464e540155518b24dccb7199b025dd5859c8af286be",
+                           "duration_seconds":  90.0,
+                           "video_codec":  "h264",
+                           "width":  1920,
+                           "height":  1080,
+                           "frame_rate":  "30/1",
+                           "pixel_format":  "yuv420p",
+                           "audio_codec":  "aac",
+                           "audio_sample_rate":  22050,
+                           "audio_channels":  1,
+                           "caption_codec":  "mov_text"
+                       },
+    "audio_normalization":  "EBU R128 loudnorm target: -16 LUFS integrated, -2 dBTP, LRA 11",
+    "mix":  "locked silent H.264 video stream copied unchanged; normalized Piper WAV encoded as AAC 192 kbps; mov_text captions embedded",
+    "review":  {
+                   "timing":  "all sentence segments non-overlapping; narration ends before 84.8-second contact hold",
+                   "pronunciation":  "FabricPC -\u003e Fabric P C; backprop -\u003e back prop; decimals spoken digit-by-digit"
+               },
+    "duration_seconds":  90.0,
+    "measured_loudness":  {
+                              "integrated_lufs":  -16.61,
+                              "true_peak_dbtp":  -1.69,
+                              "loudness_range_lu":  3.6
+                          },
+    "transcript":  {
+                       "file":  "transcript.md",
+                       "sha256":  "22a525cb3920cfc867e4e1e4daf61b376b0d37c06a41485d67bd7add9fcc4c87"
+                   }
+}
