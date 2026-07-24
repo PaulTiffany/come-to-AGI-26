@@ -150,7 +150,7 @@ Provenance: `SUBMISSION.md`, sections 2–3; `CLAIMS.md`, “Empirically support
 “Negative findings,” and “Limitations.” Predictive coding did not beat same-topology
 backprop, and FabricPC did not directly produce zero regret.
 
-## 00:77–00:85 — Closing
+## 00:77–00:84.8 — Closing
 
 Displayed:
 
@@ -163,6 +163,19 @@ Displayed:
 
 Motion: the negative model result appears first and remains visible. The meta-level
 program result resolves beneath it, followed by four green certificate marks.
+
+## 00:84.8–01:30 — Contact still
+
+Displayed:
+
+- “Paul Carver Tiffany III”
+- “Independent Researcher”
+- LinkedIn mark and QR code
+- Website mark and QR code
+
+Motion: the completed chalkboard contact card holds without motion for the final
+5.2 seconds. The original 2600 × 1800 artwork is scaled proportionally inside the
+1920 × 1080 film frame with dark side padding; it is not cropped or stretched.
 
 ## Accessibility description
 
