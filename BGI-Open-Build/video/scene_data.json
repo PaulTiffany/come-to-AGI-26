@@ -1,0 +1,104 @@
+{
+  "certificate_sha256": {
+    "belief-sensitive-boundary": "e9f6a51697a675c275e8fd4ad007402cf6439d971bff6fc8c50aeffd1d44c53d",
+    "continuation-value": "622dbf314c192b90df0898735c438279d643fd8e530f7d7f36affc36561d54bd",
+    "discrete-shadow-charge": "8c59648988057aea070bf5c121cf6f564a25e715b18899f1b1ccc0e39d757103",
+    "online-optimal-equivalence": "ae60c3334a6bfb660efd2db7198782835b89f08b981a20e00b29175a916aae0c"
+  },
+  "certified_boundary": {
+    "exact_transition_asserted": false,
+    "high": {
+      "action": "opportunity",
+      "belief": 0.2
+    },
+    "low": {
+      "action": "spend",
+      "belief": 0.05
+    },
+    "observed_opportunity": true,
+    "reachable_budget": 4.5,
+    "remaining_steps": 1
+  },
+  "claim_sources": {
+    "bellman_equivalence": [
+      "compitum-fabricpc/handoff/bellman_shadow_pricing/CLAIMS.md",
+      "BGI-Open-Build/evidence/notebooks/03_online_optimal_equivalence.ipynb"
+    ],
+    "certificate_marks": [
+      "BGI-Open-Build/evidence/notebooks/01_continuation_value.ipynb.certificate.json",
+      "BGI-Open-Build/evidence/notebooks/02_discrete_shadow_charge.ipynb.certificate.json",
+      "BGI-Open-Build/evidence/notebooks/03_online_optimal_equivalence.ipynb.certificate.json",
+      "BGI-Open-Build/evidence/notebooks/04_belief_sensitive_boundary.ipynb.certificate.json"
+    ],
+    "certified_boundary": [
+      "BGI-Open-Build/evidence/local_sources/04_belief_sensitive_boundary.py",
+      "BGI-Open-Build/evidence/notebooks/04_belief_sensitive_boundary.ipynb.certificate.json"
+    ],
+    "fabricpc_research_instrument": [
+      "compitum-fabricpc/SUBMISSION.md",
+      "compitum-fabricpc/handoff/bellman_shadow_pricing/NARRATIVE_SOURCE.md",
+      "compitum-fabricpc/handoff/bellman_shadow_pricing/CLAIMS.md"
+    ],
+    "historical_context": [
+      "compitum-fabricpc/docs/Control-of-Error.md",
+      "compitum-fabricpc/docs/adr/0001-fabricpc-trajectory-observer.md",
+      "compitum-fabricpc/docs/adr/0002-constraint-pressure-oracle.md",
+      "compitum-fabricpc/src/compitum/router.py"
+    ],
+    "tranche7_regret": [
+      "compitum-fabricpc/SUBMISSION.md",
+      "compitum-fabricpc/handoff/bellman_shadow_pricing/CLAIMS.md"
+    ],
+    "whole_action_charge": [
+      "compitum-fabricpc/SUBMISSION.md",
+      "compitum-fabricpc/handoff/bellman_shadow_pricing/NARRATIVE_SOURCE.md"
+    ]
+  },
+  "discovered_bottleneck": "scalar price times lumpy consumption",
+  "evidence_bundle_sha256": "6b48262f49e6cad498a23ff6e075f1f8522e831004f8cb3dbaeecfe46e28dc05",
+  "fabricpc_recoverable_gap_percent": 15.4,
+  "historical_context": {
+    "display_language": [
+      "Compitum had prices.",
+      "It did not let them choose."
+    ],
+    "existing_shadow_prices": "retrospective local finite-difference diagnostics",
+    "selection_role": "report-only; absent from the operative route-selection objective"
+  },
+  "interpretation": {
+    "model_verdict": {
+      "pcn_regret": 0.314,
+      "recoverable_gap_percent": 15.4,
+      "same_topology_backprop_regret": 0.314,
+      "statement": "The bounded FabricPC predictor did not clear the gate."
+    },
+    "program_verdict": {
+      "exact_bellman_charge_recovered_full_gap": true,
+      "online_optimal_mismatches": 0,
+      "statement": "The FabricPC intervention recovered Compitum's missing action-pricing mechanism."
+    },
+    "summary": "The model lost. The experiment succeeded."
+  },
+  "online_equivalence": {
+    "mismatch_count": 0
+  },
+  "research_question": "Can predicted hidden scarcity be converted into a useful routing price?",
+  "revisions": {
+    "fabricpc_commit": "32ae295182ab944b8f084abaf4a40da2c50bab5f",
+    "research_commit": "617f8979daa921d326301266e55740c0746ab95c",
+    "submission_commit": "d4c0bbd103849b8afb1019921684a062482d08cc"
+  },
+  "schema": "bgi-open-build.bellman-film-scene-data.v1",
+  "tranche7_regret": {
+    "exact_belief": 0.0,
+    "fabricpc_backprop": 0.314,
+    "fabricpc_pcn": 0.314,
+    "fixed_prior": 0.057,
+    "hmm": 0.0,
+    "inverted": 0.057,
+    "no_pricing": 0.371,
+    "pacing": 0.371,
+    "ridge": 0.0,
+    "shuffled_fabricpc": 0.457
+  }
+}

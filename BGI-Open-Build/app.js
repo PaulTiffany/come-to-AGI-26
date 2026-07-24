@@ -1,24 +1,4 @@
 (() => {
-  const threshold = 0.62;
-  const belief = document.querySelector('#belief');
-  const beliefValue = document.querySelector('#beliefValue');
-  const regionLabel = document.querySelector('#regionLabel');
-  const actionLabel = document.querySelector('#actionLabel');
-  const boundaryMarker = document.querySelector('#boundaryMarker');
-  const boundaryLabel = document.querySelector('#boundaryLabel');
-  boundaryMarker.style.left = `${threshold * 100}%`;
-  boundaryLabel.textContent = threshold.toFixed(2);
-  function renderBoundary() {
-    const value = Number(belief.value);
-    beliefValue.textContent = value.toFixed(2);
-    const above = value >= threshold;
-    regionLabel.textContent = above ? 'above boundary' : 'below boundary';
-    actionLabel.textContent = above ? 'conserve for future' : 'spend now';
-    actionLabel.style.color = above ? 'var(--blue)' : 'var(--accent)';
-  }
-  belief.addEventListener('input', renderBoundary);
-  renderBoundary();
-
   const initialBudget = 12;
   let budget = 0;
   let angle = 0;
