@@ -1,0 +1,159 @@
+{
+    "schema":  "bgi-open-build.piper-narration-script.v1",
+    "duration_seconds":  90.0,
+    "voices":  {
+                   "Matt":  {
+                                "model":  "en_GB-cori-medium.onnx",
+                                "sha256":  "1899f98e5fb8310154f3c2973f4b8a929ba7245e722b3d3a85680b833d95f10d",
+                                "length_scale":  1.08,
+                                "model_repository_license":  "MIT",
+                                "dataset_license":  "public domain",
+                                "model_card":  "https://huggingface.co/rhasspy/piper-voices/blob/v1.0.0/en/en_GB/cori/medium/MODEL_CARD",
+                                "language":  "en_GB"
+                            },
+                   "Ellie":  {
+                                 "model":  "en_US-kristin-medium.onnx",
+                                 "sha256":  "5849957f929cbf720c258f8458692d6103fff2f0e3d3b19c8259474bb06a18d4",
+                                 "length_scale":  0.98,
+                                 "model_repository_license":  "MIT",
+                                 "dataset_license":  "public domain",
+                                 "model_card":  "https://huggingface.co/rhasspy/piper-voices/blob/main/en/en_US/kristin/medium/MODEL_CARD",
+                                 "language":  "en_US"
+                             }
+               },
+    "segments":  [
+                     {
+                         "id":  "01",
+                         "start":  0.2,
+                         "speaker":  "Matt",
+                         "text":  "Compitum routes under hard resource limits.",
+                         "spoken_text":  "Compitum routes under hard resource limits."
+                     },
+                     {
+                         "id":  "02",
+                         "start":  3.15,
+                         "speaker":  "Matt",
+                         "text":  "It had shadow prices, but did not let them choose.",
+                         "spoken_text":  "It had shadow prices, but did not let them choose."
+                     },
+                     {
+                         "id":  "03",
+                         "start":  7.1,
+                         "speaker":  "Ellie",
+                         "text":  "FabricPC asked: can hidden scarcity become a routing price?",
+                         "spoken_text":  "Fabric P C asked: can hidden scarcity become a routing price?"
+                     },
+                     {
+                         "id":  "04",
+                         "start":  11.65,
+                         "speaker":  "Ellie",
+                         "text":  "The proposed chain ended with price choosing action.",
+                         "spoken_text":  "The proposed chain ended with price choosing action."
+                     },
+                     {
+                         "id":  "05",
+                         "start":  15.15,
+                         "speaker":  "Matt",
+                         "text":  "But the final link broke.",
+                         "spoken_text":  "But the final link broke."
+                     },
+                     {
+                         "id":  "06",
+                         "start":  17,
+                         "speaker":  "Matt",
+                         "text":  "Even exact belief failed when one local price was multiplied by a lumpy action.",
+                         "spoken_text":  "Even exact belief failed when one local price was multiplied by a lumpy action."
+                     },
+                     {
+                         "id":  "07",
+                         "start":  22.55,
+                         "speaker":  "Matt",
+                         "text":  "The predictor was not the whole problem. The steering rule itself was wrong.",
+                         "spoken_text":  "The predictor was not the whole problem. The steering rule itself was wrong."
+                     },
+                     {
+                         "id":  "08",
+                         "start":  28.2,
+                         "speaker":  "Ellie",
+                         "text":  "The correction prices the whole action.",
+                         "spoken_text":  "The correction prices the whole action."
+                     },
+                     {
+                         "id":  "09",
+                         "start":  30.75,
+                         "speaker":  "Ellie",
+                         "text":  "It compares future value before spending with future value after spending.",
+                         "spoken_text":  "It compares future value before spending with future value after spending."
+                     },
+                     {
+                         "id":  "10",
+                         "start":  35,
+                         "speaker":  "Ellie",
+                         "text":  "The discrete unit charges telescope to the same two lookups: exact charge, not a tangent.",
+                         "spoken_text":  "The discrete unit charges telescope to the same two lookups: exact charge, not a tangent."
+                     },
+                     {
+                         "id":  "11",
+                         "start":  42.15,
+                         "speaker":  "Matt",
+                         "text":  "Immediate utility minus action charge now ranks choices exactly like Bellman.",
+                         "spoken_text":  "Immediate utility minus action charge now ranks choices exactly like Bellman."
+                     },
+                     {
+                         "id":  "12",
+                         "start":  48.15,
+                         "speaker":  "Matt",
+                         "text":  "Certified choices and utility matched. Mismatches: zero.",
+                         "spoken_text":  "Certified choices and utility matched. Mismatches: zero."
+                     },
+                     {
+                         "id":  "13",
+                         "start":  54.05,
+                         "speaker":  "Ellie",
+                         "text":  "Belief still matters.",
+                         "spoken_text":  "Belief still matters."
+                     },
+                     {
+                         "id":  "14",
+                         "start":  56,
+                         "speaker":  "Ellie",
+                         "text":  "At one reachable state, belief point zero five selects spend; point two zero selects opportunity.",
+                         "spoken_text":  "At one reachable state, belief point zero five selects spend; point two zero selects opportunity."
+                     },
+                     {
+                         "id":  "15",
+                         "start":  62.85,
+                         "speaker":  "Ellie",
+                         "text":  "This proves an action change, not the threshold.",
+                         "spoken_text":  "This proves an action change, not the threshold."
+                     },
+                     {
+                         "id":  "16",
+                         "start":  66.3,
+                         "speaker":  "Matt",
+                         "text":  "The fixed FabricPC predictor did not clear its gate.",
+                         "spoken_text":  "The fixed Fabric P C predictor did not clear its gate."
+                     },
+                     {
+                         "id":  "17",
+                         "start":  70,
+                         "speaker":  "Matt",
+                         "text":  "Predictive coding tied backprop at point three one four: fifteen point four percent of the recoverable gap.",
+                         "spoken_text":  "Predictive coding tied back prop at point three one four: fifteen point four percent of the recoverable gap."
+                     },
+                     {
+                         "id":  "18",
+                         "start":  77.05,
+                         "speaker":  "Ellie",
+                         "text":  "The intervention restored exact action pricing.",
+                         "spoken_text":  "The intervention restored exact action pricing."
+                     },
+                     {
+                         "id":  "19",
+                         "start":  80.65,
+                         "speaker":  "Ellie",
+                         "text":  "The model lost. The experiment succeeded.",
+                         "spoken_text":  "The model lost. The experiment succeeded."
+                     }
+                 ]
+}

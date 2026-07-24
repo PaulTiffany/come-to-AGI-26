@@ -50,19 +50,41 @@
       <header class="section-heading">
         <span class="eyebrow">Proof-film</span>
         <h2>Bellman shadow pricing, in motion.</h2>
-        <p>A silent proof-film derived from the published claims and certified evidence. The bounded FabricPC predictor did not clear the gate; the FabricPC intervention recovered Compitum’s missing action-pricing mechanism.</p>
+        <p>Two editions derived from the published claims and certified evidence: an accessible offline-Piper narration and the locked silent source film. The bounded FabricPC predictor did not clear the gate; the FabricPC intervention recovered Compitum’s missing action-pricing mechanism.</p>
       </header>
-      <div class="panel film-panel">
-        <video controls playsinline preload="metadata" poster="media/bellman-shadow-pricing-poster.png">
-          <source src="media/bellman-shadow-pricing.mp4" type="video/mp4">
-          Your browser does not support embedded video.
-        </video>
-        <nav class="film-links" aria-label="Proof-film artifacts">
-          <a href="video/transcript.md">Transcript</a>
-          <a href="video/bellman_shadow_pricing.py">Manim source</a>
-          <a href="video/scene_data.json">Scene data</a>
-          <a href="video/render_receipt.json">Render receipt</a>
-        </nav>
+      <div class="film-editions">
+        <article class="panel film-panel">
+          <span class="eyebrow">Accessible edition</span>
+          <h3>Offline Matt + Ellie narration</h3>
+          <p class="film-note">Scene-timed lay narration synthesized locally with Piper 1.4.2. English captions are available in the player.</p>
+          <video controls playsinline preload="metadata" poster="media/bellman-shadow-pricing-poster.png">
+            <source src="media/bellman-shadow-pricing-narrated.mp4" type="video/mp4">
+            <track kind="captions" src="narration/captions/bellman-shadow-pricing-narrated.vtt" srclang="en" label="English" default>
+            Your browser does not support embedded video.
+          </video>
+          <nav class="film-links" aria-label="Narrated proof-film artifacts">
+            <a href="narration/transcript.md">Narration transcript</a>
+            <a href="narration/captions/bellman-shadow-pricing-narrated.srt">SRT captions</a>
+            <a href="narration/narration_receipt.json">Narration receipt</a>
+            <a href="narration/ATTRIBUTION.md">Voice attribution</a>
+            <a href="narration/script.json">Timed script</a>
+          </nav>
+        </article>
+        <article class="panel film-panel">
+          <span class="eyebrow">Certified source film</span>
+          <h3>Silent edition</h3>
+          <p class="film-note">The locked silent film remains separately available and unchanged.</p>
+          <video controls playsinline preload="metadata" poster="media/bellman-shadow-pricing-poster.png">
+            <source src="media/bellman-shadow-pricing.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+          <nav class="film-links" aria-label="Silent proof-film artifacts">
+            <a href="video/transcript.md">Visual transcript</a>
+            <a href="video/bellman_shadow_pricing.py">Manim source</a>
+            <a href="video/scene_data.json">Scene data</a>
+            <a href="video/render_receipt.json">Render receipt</a>
+          </nav>
+        </article>
       </div>
     </section>
     <section class="section" id="boundary">
