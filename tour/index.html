@@ -6,6 +6,7 @@
 <title>Tour — The Hypothesis Surface</title>
 <meta name="description" content="A plain-language introduction to The Hypothesis Surface and a zone-by-zone tour of the AGI-26 poster.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://player.vimeo.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -34,6 +35,83 @@
   h1 { font-weight: 500; font-size: 28px; letter-spacing: 3px; margin: 28px 0 6px; }
   .kicker { font-family: 'IBM Plex Mono', monospace; font-weight: 300; font-size: 13px; letter-spacing: 4px; color: rgba(232,230,223,0.55); text-transform: uppercase; }
   .intro { font-weight: 300; font-size: 17px; line-height: 1.65; color: rgba(232,230,223,0.82); margin: 22px 0 38px; }
+
+  .film {
+    margin: 0 0 42px;
+    border: 1px solid var(--line-strong);
+    background: #080908;
+    box-shadow: 0 24px 70px rgba(0,0,0,.24);
+  }
+  .film-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 18px 20px 16px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(90deg, rgba(237,205,119,.055), rgba(143,207,202,.025));
+  }
+  .film-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+  }
+  .film-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--faint);
+    text-align: right;
+  }
+  .film-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #000;
+  }
+  .film-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .film-foot {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    padding: 13px 18px 15px;
+    border-top: 1px solid var(--line);
+  }
+  .film-note {
+    margin: 0;
+    color: var(--faint);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    line-height: 1.55;
+    letter-spacing: .45px;
+  }
+  .film-links {
+    display: flex;
+    flex: none;
+    gap: 7px;
+  }
+  .film-links a {
+    padding: 7px 9px;
+    border: 1px solid var(--line);
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .5px;
+    color: rgba(232,230,223,.76);
+    white-space: nowrap;
+  }
+  .film-links a:hover { border-color: rgba(232,230,223,.42); background: rgba(255,255,255,.045); }
 
   .abstract {
     margin: 0 0 60px;
@@ -216,6 +294,9 @@
 
   @media (max-width: 620px) {
     .wrap { padding: 38px 14px 58px; }
+    .film-head, .film-foot { align-items: flex-start; flex-direction: column; }
+    .film-meta { text-align: left; }
+    .film-links { flex-wrap: wrap; }
     .abstract-head, .abstract-body { padding-left: 20px; padding-right: 20px; }
     .concept-grid, .depth-grid { grid-template-columns: 1fr; }
     .concept-card { min-height: 0; }
@@ -236,6 +317,28 @@
     <div class="kicker">AGI-26 &middot; San Francisco &middot; 2026</div>
     <h1>A tour of the poster</h1>
     <p class="intro">Begin with the paper in plain language, then read the poster top to bottom and rail to rail. For the technical claims, proofs, experiments, and reproduction artifacts behind it, see the <a href="https://github.com/PaulTiffany/hypothesis-surface-agi26">materials</a> or <a href="../chat/">ask OmegaClaw</a>.</p>
+
+    <section class="film" aria-labelledby="breakpoints-title">
+      <header class="film-head">
+        <h2 class="film-title" id="breakpoints-title">At the Breakpoints</h2>
+        <div class="film-meta">English cut<br>autoplay · muted · loop</div>
+      </header>
+      <div class="film-frame">
+        <iframe
+          src="https://player.vimeo.com/video/1207869981?autoplay=1&amp;muted=1&amp;loop=1&amp;autopause=0&amp;title=0&amp;byline=0&amp;portrait=0"
+          title="At the Breakpoints — English"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <footer class="film-foot">
+        <p class="film-note">The film begins silently. Use the Vimeo controls to hear it or enter fullscreen.</p>
+        <div class="film-links">
+          <a href="https://vimeo.com/1207869981?share=copy&amp;fl=cl&amp;fe=ci">English on Vimeo</a>
+          <a href="https://vimeo.com/1207855981?share=copy&amp;fl=sv&amp;fe=ci">Alternate version</a>
+        </div>
+      </footer>
+    </section>
 
     <section class="abstract" aria-labelledby="lay-abstract-title">
       <header class="abstract-head">
