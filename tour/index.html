@@ -8,64 +8,201 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
-  html, body { margin: 0; background: #0c0d0c; color: #e8e6df; font-family: 'Oswald', sans-serif; }
-  a { color: #e8e6df; }
+  :root {
+    --paper: #e8e6df;
+    --dim: rgba(232,230,223,0.78);
+    --faint: rgba(232,230,223,0.48);
+    --line: rgba(232,230,223,0.14);
+    --line-strong: rgba(232,230,223,0.24);
+    --gold: #edcd77;
+    --cyan: #8fcfca;
+    --panel: rgba(232,230,223,0.028);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #0c0d0c; color: var(--paper); font-family: 'Oswald', sans-serif; }
+  body {
+    background:
+      radial-gradient(circle at 18% 8%, rgba(143,207,202,.045), transparent 28rem),
+      radial-gradient(circle at 84% 24%, rgba(237,205,119,.04), transparent 24rem),
+      #0c0d0c;
+  }
+  a { color: var(--paper); }
   a:hover { color: #ffffff; }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 20px 72px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 20px 72px; }
   .back { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 1px; text-decoration: none; opacity: 0.6; }
   .back:hover { opacity: 1; }
   h1 { font-weight: 500; font-size: 28px; letter-spacing: 3px; margin: 28px 0 6px; }
   .kicker { font-family: 'IBM Plex Mono', monospace; font-weight: 300; font-size: 13px; letter-spacing: 4px; color: rgba(232,230,223,0.55); text-transform: uppercase; }
-  .intro { font-weight: 300; font-size: 17px; line-height: 1.6; color: rgba(232,230,223,0.82); margin: 22px 0 38px; }
+  .intro { font-weight: 300; font-size: 17px; line-height: 1.65; color: rgba(232,230,223,0.82); margin: 22px 0 38px; }
+
   .abstract {
-    margin: 0 0 54px;
-    padding: 30px 30px 32px;
-    border: 1px solid rgba(232,230,223,0.18);
-    border-left: 3px solid rgba(237,205,119,0.78);
-    background: rgba(232,230,223,0.025);
+    margin: 0 0 60px;
+    border: 1px solid var(--line-strong);
+    background: rgba(232,230,223,0.018);
+    box-shadow: 0 24px 70px rgba(0,0,0,.18);
   }
-  .abstract-label {
-    margin: 0 0 10px;
+  .abstract-head {
+    position: relative;
+    overflow: hidden;
+    padding: 30px 30px 32px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(135deg, rgba(237,205,119,.065), transparent 58%);
+  }
+  .abstract-head::after {
+    content: "?";
+    position: absolute;
+    right: 20px;
+    top: -28px;
+    font-family: Georgia, serif;
+    font-size: 150px;
+    line-height: 1;
+    color: rgba(232,230,223,.035);
+    pointer-events: none;
+  }
+  .abstract-label,
+  .section-label,
+  .card-label,
+  .map-label {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(237,205,119,0.78);
   }
-  .abstract h2 {
-    margin: 0 0 22px;
-    font-weight: 500;
-    font-size: 24px;
-    letter-spacing: 1.5px;
-  }
-  .abstract p {
-    margin: 0;
+  .abstract-label { margin: 0 0 10px; color: rgba(237,205,119,0.82); }
+  .abstract h2 { margin: 0 0 16px; font-weight: 500; font-size: 26px; letter-spacing: 1.5px; }
+  .abstract-head p { max-width: 640px; margin: 0; font-weight: 300; font-size: 17px; line-height: 1.72; color: var(--dim); }
+  .abstract strong { color: #f4f1e9; font-weight: 500; }
+
+  .abstract-body { padding: 28px 30px 32px; }
+  .section-label { margin: 0 0 13px; color: var(--faint); }
+  .problem {
+    margin: 0 0 28px;
+    padding: 0 0 26px 20px;
+    border-left: 2px solid var(--cyan);
+    border-bottom: 1px solid var(--line);
     font-weight: 300;
     font-size: 16px;
     line-height: 1.72;
-    color: rgba(232,230,223,0.80);
+    color: var(--dim);
   }
-  .abstract p + p { margin-top: 17px; }
-  .abstract strong { color: #f1eee6; font-weight: 500; }
+
+  .concept-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0 0 28px;
+  }
+  .concept-card {
+    min-height: 182px;
+    padding: 19px 19px 20px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+  }
+  .concept-card:nth-child(1) { border-top: 2px solid rgba(143,207,202,.7); }
+  .concept-card:nth-child(2) { border-top: 2px solid rgba(237,205,119,.7); }
+  .concept-card:nth-child(3) { border-top: 2px solid rgba(211,154,154,.68); }
+  .concept-card:nth-child(4) { border-top: 2px solid rgba(181,162,219,.68); }
+  .card-label { color: var(--faint); letter-spacing: 2px; }
+  .concept-card h3 { margin: 8px 0 8px; font-size: 20px; font-weight: 500; letter-spacing: .7px; }
+  .concept-card p { margin: 0; font-size: 14.5px; font-weight: 300; line-height: 1.62; color: rgba(232,230,223,.72); }
+
+  .flow {
+    margin: 0 0 28px;
+    padding: 20px;
+    border: 1px solid var(--line);
+    background: linear-gradient(90deg, rgba(143,207,202,.035), rgba(237,205,119,.035));
+  }
+  .flow-line {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .6px;
+    text-align: center;
+  }
+  .flow-node {
+    padding: 9px 6px;
+    border: 1px solid var(--line);
+    background: rgba(12,13,12,.62);
+  }
+  .flow-arrow { color: var(--gold); }
+  .flow-note { margin: 14px 0 0; text-align: center; color: var(--faint); font-size: 13px; font-weight: 300; }
+
+  .result {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 23px;
+    align-items: center;
+    margin: 0 0 28px;
+    padding: 23px;
+    border: 1px solid rgba(237,205,119,.30);
+    background: rgba(237,205,119,.045);
+  }
+  .result-number {
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: -1px;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .result-number small { display: block; margin-top: 7px; font-size: 9px; letter-spacing: 2px; color: var(--faint); text-transform: uppercase; }
+  .result-copy h3 { margin: 0 0 7px; font-size: 19px; font-weight: 500; }
+  .result-copy p { margin: 0; font-size: 14.5px; font-weight: 300; line-height: 1.64; color: rgba(232,230,223,.73); }
+
+  .depth-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 28px; }
+  .depth-card { padding: 21px; border: 1px solid var(--line); background: var(--panel); }
+  .depth-card h3 { margin: 8px 0 10px; font-size: 19px; font-weight: 500; }
+  .depth-card p { margin: 0; font-size: 14.5px; font-weight: 300; line-height: 1.65; color: rgba(232,230,223,.72); }
+
+  .boundary {
+    position: relative;
+    margin: 0;
+    padding: 24px 24px 24px 72px;
+    border: 1px solid var(--line-strong);
+    background: rgba(143,207,202,.038);
+  }
+  .boundary::before {
+    content: "H";
+    position: absolute;
+    left: 23px;
+    top: 22px;
+    width: 31px;
+    height: 31px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(143,207,202,.5);
+    border-radius: 50%;
+    color: var(--cyan);
+    font-family: Georgia, serif;
+    font-size: 16px;
+  }
+  .boundary h3 { margin: 0 0 8px; font-size: 20px; font-weight: 500; }
+  .boundary p { margin: 0; font-size: 15px; font-weight: 300; line-height: 1.68; color: var(--dim); }
+
   .abstract-links {
-    margin-top: 24px;
-    padding-top: 18px;
-    border-top: 1px solid rgba(232,230,223,0.12);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 26px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+  .abstract-links a {
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    text-decoration: none;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    line-height: 1.9;
+    font-size: 10px;
     letter-spacing: .5px;
-    color: rgba(232,230,223,0.52);
+    color: rgba(232,230,223,.78);
+    background: rgba(255,255,255,.018);
   }
-  .abstract-links a { color: rgba(232,230,223,0.82); }
-  .map-label {
-    margin: 0 0 7px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: rgba(232,230,223,0.42);
-  }
+  .abstract-links a:hover { border-color: rgba(232,230,223,.42); background: rgba(255,255,255,.045); }
+
+  .map-label { margin: 0 0 7px; color: rgba(232,230,223,0.42); }
   .map-title { margin: 0 0 24px; font-weight: 500; font-size: 23px; letter-spacing: 1.5px; }
   .stop { display: flex; gap: 20px; padding: 22px 0; border-top: 1px solid rgba(232,230,223,0.14); }
   .stop:last-of-type { border-bottom: 1px solid rgba(232,230,223,0.14); }
@@ -76,10 +213,18 @@
   .stop-body code .hat { font-family: serif; }
   footer { margin-top: 48px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 1px; color: rgba(232,230,223,0.5); }
   footer a { color: rgba(232,230,223,0.75); }
-  @media (max-width: 560px) {
-    .wrap { padding: 38px 16px 58px; }
-    .abstract { padding: 24px 20px 26px; }
-    .abstract p { font-size: 15px; }
+
+  @media (max-width: 620px) {
+    .wrap { padding: 38px 14px 58px; }
+    .abstract-head, .abstract-body { padding-left: 20px; padding-right: 20px; }
+    .concept-grid, .depth-grid { grid-template-columns: 1fr; }
+    .concept-card { min-height: 0; }
+    .flow-line { grid-template-columns: 1fr; gap: 5px; }
+    .flow-arrow { transform: rotate(90deg); }
+    .result { grid-template-columns: 1fr; text-align: left; }
+    .result-number { text-align: left; }
+    .boundary { padding: 64px 20px 22px; }
+    .boundary::before { left: 20px; top: 18px; }
     .stop { gap: 13px; }
     .stop-id { width: 44px; }
   }
@@ -90,33 +235,90 @@
     <a class="back" href="../">&larr; come-to-AGI-26</a>
     <div class="kicker">AGI-26 &middot; San Francisco &middot; 2026</div>
     <h1>A tour of the poster</h1>
-    <p class="intro">Begin with the paper in plain language, then read the poster top to bottom and rail to rail. For the technical claims, proofs, experiments, and reproduction artifacts behind it, see the <a href="https://github.com/PaulTiffany/hypothesis-surface-agi26">official archived materials</a>.</p>
+    <p class="intro">Begin with the paper in plain language, then read the poster top to bottom and rail to rail. For the technical claims, proofs, experiments, and reproduction artifacts behind it, see the <a href="https://github.com/PaulTiffany/hypothesis-surface-agi26">materials</a> or <a href="../chat/">ask OmegaClaw</a>.</p>
 
     <section class="abstract" aria-labelledby="lay-abstract-title">
-      <div class="abstract-label">Extended layman&rsquo;s abstract</div>
-      <h2 id="lay-abstract-title">What is the paper actually saying?</h2>
+      <header class="abstract-head">
+        <div class="abstract-label">Extended layman&rsquo;s abstract</div>
+        <h2 id="lay-abstract-title">What is the paper actually saying?</h2>
+        <p><strong>A research system should reveal the state of an inquiry, not merely manufacture its cleanest-sounding answer.</strong> The Hypothesis Surface is a proposed workspace for keeping evidence, uncertainty, conflict, absence, and next actions visible at the same time.</p>
+      </header>
 
-      <p>Most AI systems are built to produce an answer. A research system has a harder job. It must keep track of where each claim came from, how confident it should be, which claims conflict, what remains unknown, and what experiment or observation could change the picture. When those distinctions are compressed into one smooth paragraph, the result may sound intelligent while concealing the real state of the inquiry.</p>
+      <div class="abstract-body">
+        <div class="section-label">The problem</div>
+        <p class="problem">Most AI systems are built to produce an answer. A research system has a harder job: it must track where each claim came from, how confident it should be, which claims conflict, what remains unknown, and what observation could change the picture. Compress those distinctions into one smooth paragraph and the system may sound intelligent while concealing the real state of the inquiry.</p>
 
-      <p><strong>The Hypothesis Surface</strong> proposes a workspace for preventing that collapse. On the Surface, a claim is not allowed to appear by itself. It carries a <em>fiber</em>: a small bundle recording its confidence, the conditions under which it applies, and the witnesses or sources that support it. Two claims may therefore use similar words while remaining different objects because they were observed at different scales, under different assumptions, or with different evidence.</p>
+        <div class="section-label">What the Surface keeps separate</div>
+        <div class="concept-grid">
+          <article class="concept-card">
+            <div class="card-label">01 · Evidence</div>
+            <h3>Claims carry fibers</h3>
+            <p>A claim is not allowed to appear alone. Its fiber records confidence, conditions, resolution, and supporting witnesses. Similar sentences can therefore remain different epistemic objects.</p>
+          </article>
+          <article class="concept-card">
+            <div class="card-label">02 · Conflict</div>
+            <h3>Disagreement leaves a certificate</h3>
+            <p>A conflict is not averaged away or handed to another model for a verdict. It becomes a durable, typed record of what failed to fit and what kind of revision might matter.</p>
+          </article>
+          <article class="concept-card">
+            <div class="card-label">03 · Absence</div>
+            <h3>Unknown regions become voids</h3>
+            <p>A void records what is missing, which claims border the gap, and what evidence could resolve it. Absence becomes structured research state rather than an invitation to guess.</p>
+          </article>
+          <article class="concept-card">
+            <div class="card-label">04 · Imagination</div>
+            <h3>Voids generate hypotheses</h3>
+            <p>The system may extend a boundary, expose a hidden comparison axis, transport an analogy, or invert an obstruction. Every proposal enters at low confidence with its origin attached.</p>
+          </article>
+        </div>
 
-      <p>The system then asks where those claim-fiber pairs fit together and where they do not. A disagreement is not automatically averaged away or handed to another language model for a verdict. It becomes a typed <em>certificate</em>: a durable record of an obstruction that the system can inspect later. Some conflicts indicate a structural incompatibility; others may disappear when evidence, resolution, or assumptions are revised. Preserving that distinction matters because different failures call for different research actions.</p>
+        <div class="section-label">The operational spine</div>
+        <div class="flow" aria-label="Claims flow through fibers, certificates, voids, and hypotheses">
+          <div class="flow-line">
+            <div class="flow-node">CLAIMS</div><div class="flow-arrow">→</div>
+            <div class="flow-node">FIBERS</div><div class="flow-arrow">→</div>
+            <div class="flow-node">CERTIFICATES</div><div class="flow-arrow">→</div>
+            <div class="flow-node">VOIDS</div><div class="flow-arrow">→</div>
+            <div class="flow-node">HYPOTHESES</div>
+          </div>
+          <p class="flow-note">Generation is not promotion. A proposed hypothesis does not become a finding merely because the system produced it.</p>
+        </div>
 
-      <p>The Surface also represents absence. A region with no supported answer is called a <em>void</em>. That does not mean the system fills the gap with a guess. It records what is missing, what established or uncertain claims border the gap, and what evidence could resolve it. The shape of that unresolved region can then generate candidate hypotheses: extend a boundary, inspect a hidden comparison axis, transport an analogy carefully, or turn a known obstruction into a testable opposite. Every generated hypothesis enters at low confidence with its origin attached. Generation is not promotion.</p>
+        <div class="section-label">One measured mechanism</div>
+        <div class="result">
+          <div class="result-number">0.36 → 0.00<small>lexical masking rate</small></div>
+          <div class="result-copy">
+            <h3>Anti-masking limits how certain the answer may sound.</h3>
+            <p>The final wording may hedge, qualify, or narrow a claim, but it may not express more confidence than the attached evidence supports. In the paper&rsquo;s small deterministic evaluation, masking measured about 0.36 with the rule disabled and 0.00 with it enabled. That demonstrates a mechanism-level behavior change—not perfect honesty, full semantic understanding, or universal performance.</p>
+          </div>
+        </div>
 
-      <p>A further rule, called <strong>anti-masking</strong>, prevents the final wording from sounding more certain than its evidence. The system may hedge, qualify, or narrow a statement, but it may not render a weakly supported claim as a definitive conclusion. In the paper&rsquo;s small deterministic evaluation, the measured lexical masking rate was 0.00 with this rule enabled and about 0.36 when it was disabled. That result shows that the mechanism changed the tested language behavior; it does not prove perfect honesty, complete semantic understanding, or universal performance across models and scientific domains.</p>
+        <div class="section-label">How the proposal is tested and extended</div>
+        <div class="depth-grid">
+          <article class="depth-card">
+            <div class="card-label">Inspectable implementation</div>
+            <h3>A deliberately plain pipeline</h3>
+            <p>The proof of concept uses CPU-only Python, inspectable rules, and no language-model judge deciding which claims are true. It extracts claims, attaches fibers, propagates confidence, scores conflict, maps voids, proposes hypotheses, and checks rendered language. The claim is not that lexical machinery solves science; it is that epistemic bookkeeping can be explicit and falsifiable before richer semantics are added.</p>
+          </article>
+          <article class="depth-card">
+            <div class="card-label">Mathematical companions</div>
+            <h3>Differentiation without erasure</h3>
+            <p>The paper connects claim differentiation and integration to a broader geometric picture. Public companions develop carefully scoped versions of the Fuzzy Fundamental Theorem, Observer-Relative Stokes, a masking-to-residue bridge, and observer-bounded critical scaling. Their assumptions and limits remain part of the claims; they do not turn every metaphor into a theorem.</p>
+          </article>
+        </div>
 
-      <p>The proof-of-concept pipeline is deliberately plain: CPU-only Python, inspectable rules, and no language-model judge deciding which claims are true. It extracts claims, attaches fibers, propagates confidence, scores lexical conflict, emits certificates, maps voids, proposes hypotheses, and checks the confidence of the final language. The point is not that simple lexical machinery solves scientific reasoning. The point is that the epistemic bookkeeping can be made explicit, testable, and falsifiable before richer semantic systems are added.</p>
+        <div class="section-label">The governing boundary</div>
+        <aside class="boundary">
+          <h3>Not &ldquo;let an AI do science alone.&rdquo;</h3>
+          <p>The central proposal is almost the opposite. A bounded research agent may explore, compare, and propose while remaining unable to silently turn its own output into authoritative knowledge. Provenance, uncertainty, conflict, negative results, and open questions remain visible to the humans who decide what counts as evidence and what happens next. The Surface tries to make that discipline structural rather than aspirational.</p>
+        </aside>
 
-      <p>The paper also connects this operational system to a broader mathematical picture. Differentiation corresponds to keeping claims distinct; integration corresponds to bringing them into a common workspace without erasing their differences. The public companion manuscripts develop carefully scoped versions of the Fuzzy Fundamental Theorem, Observer-Relative Stokes, an explicit masking-to-residue bridge, and observer-bounded critical scaling. These arguments deepen the framework, but their assumptions and limits remain part of the claim. They are not permission to declare every metaphor a theorem.</p>
-
-      <p>The central proposal is therefore not &ldquo;let an AI do science alone.&rdquo; It is almost the opposite. A bounded research agent should be able to explore, compare, and propose while remaining unable to silently turn its own output into authoritative knowledge. Provenance, uncertainty, conflict, negative results, and open questions should remain visible to the humans who decide what counts as evidence and what should happen next. The Surface is an attempt to make that discipline structural rather than aspirational.</p>
-
-      <div class="abstract-links">
-        <a href="https://link.springer.com/chapter/10.1007/978-3-032-33195-3_25">Published Springer paper</a> &middot;
-        <a href="https://github.com/PaulTiffany/hypothesis-surface-agi26/tree/master/supplementary">Formal companions and glossary</a> &middot;
-        <a href="https://github.com/PaulTiffany/hypothesis-surface-agi26/tree/master/experiments">Experiments and reproduction artifacts</a> &middot;
-        <a href="../chat/">Ask OmegaClaw</a>
+        <div class="abstract-links">
+          <a href="https://link.springer.com/chapter/10.1007/978-3-032-33195-3_25">Published paper</a>
+          <a href="https://github.com/PaulTiffany/hypothesis-surface-agi26/tree/master/supplementary">Formal companions + glossary</a>
+          <a href="https://github.com/PaulTiffany/hypothesis-surface-agi26/tree/master/experiments">Experiments + reproduction</a>
+          <a href="../chat/">Ask OmegaClaw</a>
+        </div>
       </div>
     </section>
 
