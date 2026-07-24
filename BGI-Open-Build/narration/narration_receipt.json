@@ -37,7 +37,7 @@
                      },
     "script":  {
                    "file":  "script.json",
-                   "sha256":  "b0cc6923dd6c4b9134b546027a8646480163aa7ff1af9ba1d5b9762b80f34975"
+                   "sha256":  "91f3faf14383c0d55cd5700d41f8c9ca95aa49601c35d7aca61d3f573554354d"
                },
     "segments":  [
                      {
@@ -273,6 +273,6 @@
                           },
     "transcript":  {
                        "file":  "transcript.md",
-                       "sha256":  "22a525cb3920cfc867e4e1e4daf61b376b0d37c06a41485d67bd7add9fcc4c87"
+                       "sha256":  "d2eab54f1b660d168bd603b9c2da8031119dd916249903b226a416e50bc9c99f"
                    }
 }
