@@ -12,7 +12,10 @@ directly produced zero regret, or that the exact Bellman oracle was learned.
 
 `build_scene_data.py` reads narrative Markdown and public evidence artifacts as
 data. It does not import or execute Compitum. `bellman_shadow_pricing.py` renders
-the single `BellmanShadowPricingFilm` scene from `scene_data.json`.
+the single `BellmanShadowPricingFilm` scene from `scene_data.json`. The render
+pipeline then holds `board-mockup-completed.png` for the final 5.2 seconds, bringing
+the silent film to exactly 90 seconds without cropping or stretching the supplied
+artwork.
 
 ## Rebuild
 
