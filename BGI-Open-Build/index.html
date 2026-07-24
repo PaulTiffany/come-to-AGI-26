@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="BGI Open Build: Bellman shadow pricing, governed agent flow, and certificate-backed evidence.">
+  <title>BGI Open Build — Bellman Shadow Pricing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="back" href="../">← come-to-AGI-26</a>
+    <div>
+      <span class="eyebrow">BGI Open Build · AGI-26</span>
+      <h1>Bellman Shadow Pricing</h1>
+      <p class="lede">A governed research surface: discrete continuation-value pricing, bounded action, and executable evidence.</p>
+    </div>
+    <nav aria-label="Page sections">
+      <a href="#result">Result</a>
+      <a href="#boundary">Boundary</a>
+      <a href="#flow">Flow</a>
+      <a href="#evidence">Evidence</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-grid" id="result">
+      <article class="panel hero-copy">
+        <span class="eyebrow">The correction</span>
+        <h2>Price the whole action, not a local derivative.</h2>
+        <p>A scalar shadow price multiplied by total consumption can misprice a discrete action that crosses several marginal-value regions.</p>
+        <div class="formula" role="img" aria-label="Action charge equals continuation value before consumption minus continuation value after consumption">
+          C<sub>t</sub>(a) = V<sub>t+1</sub>(B<sub>t</sub>, q<sub>t+1</sub>) − V<sub>t+1</sub>(B<sub>t</sub> − c<sub>t</sub>(a), q<sub>t+1</sub>)
+        </div>
+        <p>Maximizing immediate utility minus this action charge is Bellman-Q selection up to an action-independent constant.</p>
+      </article>
+      <aside class="panel scorecard" aria-label="Research result summary">
+        <span class="eyebrow">Closed program</span>
+        <div><strong>0</strong><span>online regret · exact belief</span></div>
+        <div><strong>0</strong><span>online regret · ridge</span></div>
+        <div><strong>15.4%</strong><span>recoverable gap captured · fixed FabricPC topology</span></div>
+        <div><strong>PASS</strong><span>discrete shadow-charge equivalence</span></div>
+        <p class="caveat">FabricPC predictive coding and same-topology backprop tied. Neither cleared the economic gate. This is not a general failure claim about predictive coding.</p>
+      </aside>
+    </section>
+
+    <section class="section" id="boundary">
+      <header class="section-heading">
+        <span class="eyebrow">Decision relevance</span>
+        <h2>Belief changes the optimal action.</h2>
+        <p>This control is a presentation of a certified boundary, not a browser reimplementation of the Bellman solver.</p>
+      </header>
+      <div class="panel boundary-demo">
+        <label for="belief">Belief in high-opportunity regime <output id="beliefValue">0.50</output></label>
+        <input id="belief" type="range" min="0" max="1" step="0.01" value="0.50">
+        <div class="boundary-track" aria-hidden="true"><span id="boundaryMarker"></span></div>
+        <div class="decision-row">
+          <div><span>Current region</span><strong id="regionLabel">below boundary</strong></div>
+          <div><span>Optimal action</span><strong id="actionLabel">spend now</strong></div>
+          <div><span>Boundary</span><strong id="boundaryLabel">0.62</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="flow">
+      <header class="section-heading">
+        <span class="eyebrow">Governed machinery</span>
+        <h2>Let an agent move without giving it the whole stage.</h2>
+        <p>A compact bounded-flow demonstration adapted from Sketched: explicit allowance, forbidden moves, stop, rewind, and replayable trace.</p>
+      </header>
+      <div class="flow-grid">
+        <aside class="panel controls">
+          <button id="grant">1. Grant 12 moves</button>
+          <button id="step" disabled>2A. Move once</button>
+          <button id="run" disabled>2B. Run continuously</button>
+          <button id="forbidden" disabled>3. Try forbidden move</button>
+          <button id="stop" class="danger">4. Stop + rewind</button>
+          <div class="meter" aria-label="Moves remaining"><span id="meterFill"></span></div>
+          <p id="budgetText">Nothing granted.</p>
+        </aside>
+        <div class="panel stage" id="stage">
+          <div class="agent-field" id="agentField"></div>
+          <div class="human-origin"><strong>YOU</strong><span>protected origin</span></div>
+          <p id="flowStatus">The agent is paused outside the surface.</p>
+        </div>
+        <aside class="panel trace-panel">
+          <div class="trace-head"><h3>Witness trace</h3><span id="traceVerdict">PASS</span></div>
+          <ol id="trace"></ol>
+          <button id="downloadTrace" class="quiet">Export trace</button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="evidence">
+      <header class="section-heading">
+        <span class="eyebrow">Notebook Compiler</span>
+        <h2>Certificate-backed evidence.</h2>
+        <p>The presentation reads certificate JSON directly. Narrative and machine evidence remain distinct.</p>
+      </header>
+      <div id="evidenceStatus" class="notice">Checking <code>evidence/evidence-index.json</code>…</div>
+      <div id="evidenceCards" class="evidence-grid" aria-live="polite"></div>
+      <div class="panel provenance">
+        <h3>Canonical provenance</h3>
+        <dl id="provenanceList">
+          <div><dt>Compitum research tag</dt><dd>fabricpc-compitum-shadow-pricing-v1</dd></div>
+          <div><dt>FabricPC pin</dt><dd>32ae295182ab944b8f084abaf4a40da2c50bab5f</dd></div>
+          <div><dt>Evidence bundle</dt><dd id="bundleHash">awaiting upload</dd></div>
+        </dl>
+        <p><a href="evidence/">Open the evidence directory →</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="../">come-to-AGI-26</a>
+    <span>·</span>
+    <a href="https://github.com/PaulTiffany/compitum">Compitum</a>
+    <span>·</span>
+    <a href="https://github.com/PaulTiffany/sketched">Sketched source machinery</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
