@@ -104,7 +104,7 @@ Motion: parallel rankings select action B. Their green selection arrows merge.
 Provenance: `SUBMISSION.md`, section 1; `CLAIMS.md`, “Proved or exact”;
 `evidence/notebooks/03_online_optimal_equivalence.ipynb` and its green certificate.
 
-## 00:54–00:65 — Certified belief-sensitive state
+## 00:54–00:66 — Certified belief-sensitive state
 
 Displayed:
 
@@ -124,7 +124,7 @@ high-belief state, where the certified action changes.
 Provenance: `evidence/local_sources/04_belief_sensitive_boundary.py`, its notebook, and
 its green certificate. No exact transition threshold is asserted.
 
-## 00:65–00:80 — Tranche 7 split verdict
+## 00:66–00:77 — Tranche 7 split verdict
 
 Left column, displayed:
 
@@ -150,7 +150,7 @@ Provenance: `SUBMISSION.md`, sections 2–3; `CLAIMS.md`, “Empirically support
 “Negative findings,” and “Limitations.” Predictive coding did not beat same-topology
 backprop, and FabricPC did not directly produce zero regret.
 
-## 00:80–00:90 — Closing
+## 00:77–00:85 — Closing
 
 Displayed:
 
