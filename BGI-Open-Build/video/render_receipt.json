@@ -1,7 +1,7 @@
 {
     "schema":  "bgi-open-build.manim-render-receipt.v1",
-    "render_timestamp":  "2026-07-24T11:54:58Z",
-    "source_commit":  "4b46059f58ef8946fbeda41946b627cdb797ab03",
+    "render_timestamp":  "2026-07-24T12:18:29Z",
+    "source_commit":  "95e4b841cc430e0c6ab64f7e05bac6a43a509754",
     "python_version":  "Python 3.13.4",
     "manim_version":  "Manim Community v0.20.1",
     "ffmpeg_version":  "ffmpeg version 8.0-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers",
@@ -11,8 +11,8 @@
                            "Cascadia Mono"
                        ],
     "render_command":  "manim --config_file BGI-Open-Build/video/manim.cfg --resolution 1920,1080 --fps 30 BGI-Open-Build/video/bellman_shadow_pricing.py BellmanShadowPricingFilm",
-    "normalization_command":  "ffmpeg -y -i \u003cmanim-output.mp4\u003e -c:v libx264 -preset slow -crf 20 -pix_fmt yuv420p -movflags +faststart -an BGI-Open-Build/media/bellman-shadow-pricing.mp4",
-    "duration_seconds":  84.8,
+    "normalization_command":  "ffmpeg -y -i \u003cmanim-output.mp4\u003e -c:v libx264 -preset slow -crf 20 -pix_fmt yuv420p -movflags +faststart -an \u003cnormalized-base.mp4\u003e",
+    "duration_seconds":  90,
     "width":  1920,
     "height":  1080,
     "frame_rate":  "30/1",
@@ -22,7 +22,11 @@
     "faststart":  true,
     "source_sha256":  "4048f0ae72b186316a1947b386880b8ac0fd850a3c2d2225effe8eb0c5ff22f6",
     "scene_data_sha256":  "502018cf879b5d612a7dab2382953d5b25f1104226038ffd089da90d2d1700dd",
-    "mp4_sha256":  "4ea4a99544cf6aaa8740bc3302e9fc199e73fb4683d662eb000e35de4e63dd58",
+    "mp4_sha256":  "ed1c8906e9f6c662f50a0f58a44defa2ba2515c3173fc321c5a945632d20d01b",
     "poster_sha256":  "21a37947106ffa8e53d5ddebc5ff6b0340a8e2c5aec34e263c6e27bc700fc9fa",
-    "transcript_sha256":  "b58938f31220aeeddcfb5b02bbb96123788f0249e624abf0a20080f4f8581eba"
+    "transcript_sha256":  "1c61d3435df6c7b1e405e9faa937877f3fd1a5b52c72d8658fc11c77d40224fa",
+    "assembly_command":  "ffmpeg -y -i \u003cnormalized-base.mp4\u003e -loop 1 -framerate 30 -t 5.2 -i BGI-Open-Build/video/board-mockup-completed.png -filter_complex \u003cfit-pad-and-concat\u003e -t 90 -c:v libx264 -preset slow -crf 20 -pix_fmt yuv420p -movflags +faststart -an BGI-Open-Build/media/bellman-shadow-pricing.mp4",
+    "base_mp4_sha256":  "4ea4a99544cf6aaa8740bc3302e9fc199e73fb4683d662eb000e35de4e63dd58",
+    "closing_still_seconds":  5.2,
+    "closing_still_sha256":  "f6d5d25dc4d5251a34813f472310d262f45db50d53c5be3918dd450e631617e7"
 }
