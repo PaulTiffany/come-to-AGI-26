@@ -6,6 +6,7 @@
   <meta name="description" content="BGI Open Build: Bellman shadow pricing, governed agent flow, and certificate-backed evidence.">
   <title>BGI Open Build — Bellman Shadow Pricing</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="media/bellman-shadow-pricing-poster.png">
 </head>
 <body>
   <header class="site-header">
@@ -17,6 +18,7 @@
     </div>
     <nav aria-label="Page sections">
       <a href="#result">Result</a>
+      <a href="#film">Film</a>
       <a href="#boundary">Boundary</a>
       <a href="#flow">Flow</a>
       <a href="#evidence">Evidence</a>
@@ -40,24 +42,44 @@
         <div><strong>0</strong><span>online regret · ridge</span></div>
         <div><strong>15.4%</strong><span>recoverable gap captured · fixed FabricPC topology</span></div>
         <div><strong>PASS</strong><span>discrete shadow-charge equivalence</span></div>
-        <p class="caveat">FabricPC predictive coding and same-topology backprop tied. Neither cleared the economic gate. This is not a general failure claim about predictive coding.</p>
+        <p class="caveat">FabricPC predictive coding and same-topology backprop tied. Neither cleared the economic gate. The intervention nevertheless exposed the missing action-pricing mechanism and recovered the right economics. This is not a general failure claim about predictive coding.</p>
       </aside>
     </section>
 
+    <section class="section film-section" id="film">
+      <header class="section-heading">
+        <span class="eyebrow">Proof-film</span>
+        <h2>Bellman shadow pricing, in motion.</h2>
+        <p>A silent proof-film derived from the published claims and certified evidence. The bounded FabricPC predictor did not clear the gate; the FabricPC intervention recovered Compitum’s missing action-pricing mechanism.</p>
+      </header>
+      <div class="panel film-panel">
+        <video controls playsinline preload="metadata" poster="media/bellman-shadow-pricing-poster.png">
+          <source src="media/bellman-shadow-pricing.mp4" type="video/mp4">
+          Your browser does not support embedded video.
+        </video>
+        <nav class="film-links" aria-label="Proof-film artifacts">
+          <a href="video/transcript.md">Transcript</a>
+          <a href="video/bellman_shadow_pricing.py">Manim source</a>
+          <a href="video/scene_data.json">Scene data</a>
+          <a href="video/render_receipt.json">Render receipt</a>
+        </nav>
+      </div>
+    </section>
     <section class="section" id="boundary">
       <header class="section-heading">
         <span class="eyebrow">Decision relevance</span>
         <h2>Belief changes the optimal action.</h2>
-        <p>This control is a presentation of a certified boundary, not a browser reimplementation of the Bellman solver.</p>
+        <p>A certified action change. The exact transition point is not asserted here.</p>
       </header>
       <div class="panel boundary-demo">
-        <label for="belief">Belief in high-opportunity regime <output id="beliefValue">0.50</output></label>
-        <input id="belief" type="range" min="0" max="1" step="0.01" value="0.50">
-        <div class="boundary-track" aria-hidden="true"><span id="boundaryMarker"></span></div>
-        <div class="decision-row">
-          <div><span>Current region</span><strong id="regionLabel">below boundary</strong></div>
-          <div><span>Optimal action</span><strong id="actionLabel">spend now</strong></div>
-          <div><span>Boundary</span><strong id="boundaryLabel">0.62</strong></div>
+        <div class="certified-state">
+          <span>Certified reachable state</span>
+          <strong>remaining steps = 1 · budget = 4.5 · opportunity observed</strong>
+        </div>
+        <div class="certified-boundary-grid" aria-label="Two certified belief states with different optimal actions">
+          <article><span>low belief</span><strong>q = 0.05</strong><b>SPEND</b></article>
+          <div class="transition-band" aria-hidden="true"></div>
+          <article><span>higher belief</span><strong>q = 0.20</strong><b>OPPORTUNITY</b></article>
         </div>
       </div>
     </section>

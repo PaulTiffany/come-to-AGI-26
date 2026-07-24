@@ -1,0 +1,28 @@
+{
+    "schema":  "bgi-open-build.manim-render-receipt.v1",
+    "render_timestamp":  "2026-07-24T11:54:58Z",
+    "source_commit":  "4b46059f58ef8946fbeda41946b627cdb797ab03",
+    "python_version":  "Python 3.13.4",
+    "manim_version":  "Manim Community v0.20.1",
+    "ffmpeg_version":  "ffmpeg version 8.0-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers",
+    "latex_version":  "MiKTeX-pdfTeX 4.21 (MiKTeX 25.4)",
+    "resolved_fonts":  [
+                           "Segoe UI",
+                           "Cascadia Mono"
+                       ],
+    "render_command":  "manim --config_file BGI-Open-Build/video/manim.cfg --resolution 1920,1080 --fps 30 BGI-Open-Build/video/bellman_shadow_pricing.py BellmanShadowPricingFilm",
+    "normalization_command":  "ffmpeg -y -i \u003cmanim-output.mp4\u003e -c:v libx264 -preset slow -crf 20 -pix_fmt yuv420p -movflags +faststart -an BGI-Open-Build/media/bellman-shadow-pricing.mp4",
+    "duration_seconds":  84.8,
+    "width":  1920,
+    "height":  1080,
+    "frame_rate":  "30/1",
+    "video_codec":  "h264",
+    "pixel_format":  "yuv420p",
+    "audio_streams":  0,
+    "faststart":  true,
+    "source_sha256":  "4048f0ae72b186316a1947b386880b8ac0fd850a3c2d2225effe8eb0c5ff22f6",
+    "scene_data_sha256":  "502018cf879b5d612a7dab2382953d5b25f1104226038ffd089da90d2d1700dd",
+    "mp4_sha256":  "4ea4a99544cf6aaa8740bc3302e9fc199e73fb4683d662eb000e35de4e63dd58",
+    "poster_sha256":  "21a37947106ffa8e53d5ddebc5ff6b0340a8e2c5aec34e263c6e27bc700fc9fa",
+    "transcript_sha256":  "b58938f31220aeeddcfb5b02bbb96123788f0249e624abf0a20080f4f8581eba"
+}
