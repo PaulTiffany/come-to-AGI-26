@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tour — The Hypothesis Surface</title>
-<meta name="description" content="A short guide to reading the AGI-26 Hypothesis Surface poster, zone by zone.">
+<meta name="description" content="A plain-language introduction to The Hypothesis Surface and a zone-by-zone tour of the AGI-26 poster.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -16,7 +16,57 @@
   .back:hover { opacity: 1; }
   h1 { font-weight: 500; font-size: 28px; letter-spacing: 3px; margin: 28px 0 6px; }
   .kicker { font-family: 'IBM Plex Mono', monospace; font-weight: 300; font-size: 13px; letter-spacing: 4px; color: rgba(232,230,223,0.55); text-transform: uppercase; }
-  .intro { font-weight: 300; font-size: 17px; line-height: 1.6; color: rgba(232,230,223,0.82); margin: 22px 0 44px; }
+  .intro { font-weight: 300; font-size: 17px; line-height: 1.6; color: rgba(232,230,223,0.82); margin: 22px 0 38px; }
+  .abstract {
+    margin: 0 0 54px;
+    padding: 30px 30px 32px;
+    border: 1px solid rgba(232,230,223,0.18);
+    border-left: 3px solid rgba(237,205,119,0.78);
+    background: rgba(232,230,223,0.025);
+  }
+  .abstract-label {
+    margin: 0 0 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(237,205,119,0.78);
+  }
+  .abstract h2 {
+    margin: 0 0 22px;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+  }
+  .abstract p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.72;
+    color: rgba(232,230,223,0.80);
+  }
+  .abstract p + p { margin-top: 17px; }
+  .abstract strong { color: #f1eee6; font-weight: 500; }
+  .abstract-links {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(232,230,223,0.12);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    line-height: 1.9;
+    letter-spacing: .5px;
+    color: rgba(232,230,223,0.52);
+  }
+  .abstract-links a { color: rgba(232,230,223,0.82); }
+  .map-label {
+    margin: 0 0 7px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(232,230,223,0.42);
+  }
+  .map-title { margin: 0 0 24px; font-weight: 500; font-size: 23px; letter-spacing: 1.5px; }
   .stop { display: flex; gap: 20px; padding: 22px 0; border-top: 1px solid rgba(232,230,223,0.14); }
   .stop:last-of-type { border-bottom: 1px solid rgba(232,230,223,0.14); }
   .stop-id { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 2px; color: rgba(232,230,223,0.45); flex: none; width: 56px; padding-top: 3px; }
@@ -26,6 +76,13 @@
   .stop-body code .hat { font-family: serif; }
   footer { margin-top: 48px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 1px; color: rgba(232,230,223,0.5); }
   footer a { color: rgba(232,230,223,0.75); }
+  @media (max-width: 560px) {
+    .wrap { padding: 38px 16px 58px; }
+    .abstract { padding: 24px 20px 26px; }
+    .abstract p { font-size: 15px; }
+    .stop { gap: 13px; }
+    .stop-id { width: 44px; }
+  }
 </style>
 </head>
 <body>
@@ -33,7 +90,38 @@
     <a class="back" href="../">&larr; come-to-AGI-26</a>
     <div class="kicker">AGI-26 &middot; San Francisco &middot; 2026</div>
     <h1>A tour of the poster</h1>
-    <p class="intro">The poster reads top to bottom, then rail to rail. Eight stops — what they say, and why they're placed where they are. For the technical claims, proofs, experiments, and reproduction artifacts behind them, see the <a href="https://github.com/PaulTiffany/hypothesis-surface-agi26">official archived materials</a>.</p>
+    <p class="intro">Begin with the paper in plain language, then read the poster top to bottom and rail to rail. For the technical claims, proofs, experiments, and reproduction artifacts behind it, see the <a href="https://github.com/PaulTiffany/hypothesis-surface-agi26">official archived materials</a>.</p>
+
+    <section class="abstract" aria-labelledby="lay-abstract-title">
+      <div class="abstract-label">Extended layman&rsquo;s abstract</div>
+      <h2 id="lay-abstract-title">What is the paper actually saying?</h2>
+
+      <p>Most AI systems are built to produce an answer. A research system has a harder job. It must keep track of where each claim came from, how confident it should be, which claims conflict, what remains unknown, and what experiment or observation could change the picture. When those distinctions are compressed into one smooth paragraph, the result may sound intelligent while concealing the real state of the inquiry.</p>
+
+      <p><strong>The Hypothesis Surface</strong> proposes a workspace for preventing that collapse. On the Surface, a claim is not allowed to appear by itself. It carries a <em>fiber</em>: a small bundle recording its confidence, the conditions under which it applies, and the witnesses or sources that support it. Two claims may therefore use similar words while remaining different objects because they were observed at different scales, under different assumptions, or with different evidence.</p>
+
+      <p>The system then asks where those claim-fiber pairs fit together and where they do not. A disagreement is not automatically averaged away or handed to another language model for a verdict. It becomes a typed <em>certificate</em>: a durable record of an obstruction that the system can inspect later. Some conflicts indicate a structural incompatibility; others may disappear when evidence, resolution, or assumptions are revised. Preserving that distinction matters because different failures call for different research actions.</p>
+
+      <p>The Surface also represents absence. A region with no supported answer is called a <em>void</em>. That does not mean the system fills the gap with a guess. It records what is missing, what established or uncertain claims border the gap, and what evidence could resolve it. The shape of that unresolved region can then generate candidate hypotheses: extend a boundary, inspect a hidden comparison axis, transport an analogy carefully, or turn a known obstruction into a testable opposite. Every generated hypothesis enters at low confidence with its origin attached. Generation is not promotion.</p>
+
+      <p>A further rule, called <strong>anti-masking</strong>, prevents the final wording from sounding more certain than its evidence. The system may hedge, qualify, or narrow a statement, but it may not render a weakly supported claim as a definitive conclusion. In the paper&rsquo;s small deterministic evaluation, the measured lexical masking rate was 0.00 with this rule enabled and about 0.36 when it was disabled. That result shows that the mechanism changed the tested language behavior; it does not prove perfect honesty, complete semantic understanding, or universal performance across models and scientific domains.</p>
+
+      <p>The proof-of-concept pipeline is deliberately plain: CPU-only Python, inspectable rules, and no language-model judge deciding which claims are true. It extracts claims, attaches fibers, propagates confidence, scores lexical conflict, emits certificates, maps voids, proposes hypotheses, and checks the confidence of the final language. The point is not that simple lexical machinery solves scientific reasoning. The point is that the epistemic bookkeeping can be made explicit, testable, and falsifiable before richer semantic systems are added.</p>
+
+      <p>The paper also connects this operational system to a broader mathematical picture. Differentiation corresponds to keeping claims distinct; integration corresponds to bringing them into a common workspace without erasing their differences. The public companion manuscripts develop carefully scoped versions of the Fuzzy Fundamental Theorem, Observer-Relative Stokes, an explicit masking-to-residue bridge, and observer-bounded critical scaling. These arguments deepen the framework, but their assumptions and limits remain part of the claim. They are not permission to declare every metaphor a theorem.</p>
+
+      <p>The central proposal is therefore not &ldquo;let an AI do science alone.&rdquo; It is almost the opposite. A bounded research agent should be able to explore, compare, and propose while remaining unable to silently turn its own output into authoritative knowledge. Provenance, uncertainty, conflict, negative results, and open questions should remain visible to the humans who decide what counts as evidence and what should happen next. The Surface is an attempt to make that discipline structural rather than aspirational.</p>
+
+      <div class="abstract-links">
+        <a href="https://link.springer.com/chapter/10.1007/978-3-032-33195-3_25">Published Springer paper</a> &middot;
+        <a href="https://github.com/PaulTiffany/hypothesis-surface-agi26/tree/master/supplementary">Formal companions and glossary</a> &middot;
+        <a href="https://github.com/PaulTiffany/hypothesis-surface-agi26/tree/master/experiments">Experiments and reproduction artifacts</a> &middot;
+        <a href="../chat/">Ask OmegaClaw</a>
+      </div>
+    </section>
+
+    <div class="map-label">Poster map</div>
+    <h2 class="map-title">Eight stops on the board</h2>
 
     <div class="stop">
       <div class="stop-id">M1</div>
