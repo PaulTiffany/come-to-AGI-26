@@ -1,0 +1,37 @@
+{
+  "classes": [
+    "ExactBeliefEstimatorV2",
+    "HmmBeliefEstimatorV2"
+  ],
+  "concept_confidence": "heuristic",
+  "concept_kind": "array_basics",
+  "execution_attempted": true,
+  "execution_succeeded": false,
+  "functions": [
+    "_observed_opportunity",
+    "run_shadow_charge_policy_v2"
+  ],
+  "has_main_guard": false,
+  "imports": [
+    "__future__",
+    "time",
+    "dataclasses",
+    "typing",
+    "numpy",
+    "belief_action_pricing",
+    "belief_hmm_filter",
+    "belief_regime",
+    "belief_regime_v2",
+    "environment",
+    "metrics",
+    "pricing",
+    "simulator"
+  ],
+  "language": "python",
+  "policy_blocked": false,
+  "schema_version": "2",
+  "source_sha256": "1504ae0851df951aaa84b550c55694246928b29d1e8c7d36e8db5a9162e91dae",
+  "syntax_ok": true,
+  "timed_out": false,
+  "top_level_statement_count": 19
+}

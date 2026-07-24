@@ -1,0 +1,19 @@
+{
+  "ai_used": false,
+  "concept_confidence": "heuristic",
+  "concept_kind": "generic_python",
+  "concept_title": "Working Python Example",
+  "input_sha256": "a1451446cc4928a2daf621365f4efce01a3c8d1279ed78ff65680c8180ef9afd",
+  "notebook_ran": false,
+  "notebook_sha256": "34786362922b4dc81ef7a8da4e92f20fafe89004ea613d94a1c63f15b71fae59",
+  "policy_allowed_imports": [
+    "time",
+    "typing"
+  ],
+  "policy_blocked_imports": [],
+  "policy_ok": true,
+  "schema_version": "1",
+  "signed_at": "2026-07-24T10:18:12.793312+00:00",
+  "source_ran": false,
+  "validation_passed": false
+}

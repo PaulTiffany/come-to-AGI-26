@@ -1,0 +1,35 @@
+{
+  "classes": [
+    "StepTrace"
+  ],
+  "concept_confidence": "heuristic",
+  "concept_kind": "generic_python",
+  "execution_attempted": true,
+  "execution_succeeded": false,
+  "functions": [
+    "unit_marginal_prices",
+    "action_shadow_charge",
+    "run_shadow_charge_policy"
+  ],
+  "has_main_guard": false,
+  "imports": [
+    "__future__",
+    "time",
+    "dataclasses",
+    "typing",
+    "belief_bellman",
+    "belief_pricing",
+    "belief_regime",
+    "environment",
+    "metrics",
+    "pricing",
+    "simulator"
+  ],
+  "language": "python",
+  "policy_blocked": false,
+  "schema_version": "2",
+  "source_sha256": "c4446651f6a2362a58648f5c5f2dd0b8c348f855bc14a769aab916bb420f49c8",
+  "syntax_ok": true,
+  "timed_out": false,
+  "top_level_statement_count": 17
+}

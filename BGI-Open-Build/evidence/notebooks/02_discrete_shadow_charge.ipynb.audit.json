@@ -1,0 +1,41 @@
+{
+  "compiled_at_utc": "2026-07-24T10:35:26.941476+00:00",
+  "concept_kind": "generic_python",
+  "duration_seconds": 0.20373,
+  "execution_succeeded": true,
+  "exit_code": 0,
+  "generated_sections": [
+    "title",
+    "learning_objective",
+    "original_code",
+    "explanation",
+    "execution_trace",
+    "validation",
+    "exercise",
+    "selected_answer"
+  ],
+  "input_path": "C:\\src\\notebook_compiler\\local_sources\\bellman-shadow-pricing\\02_discrete_shadow_charge.py",
+  "notebook_duration_seconds": 0.203618,
+  "notebook_execution": "passed",
+  "notebook_exit_code": 0,
+  "notebook_timed_out": false,
+  "output_path": "C:\\src\\notebook_compiler\\local_artifacts\\bellman-shadow-pricing\\notebooks\\02_discrete_shadow_charge.ipynb",
+  "policy_added_import_prefixes": [
+    "compitum"
+  ],
+  "policy_allowed_imports": [
+    "compitum"
+  ],
+  "policy_blocked": false,
+  "policy_blocked_imports": [],
+  "policy_reason": "",
+  "schema_version": "2",
+  "sections_meta": {},
+  "source_execution": "passed",
+  "timed_out": false,
+  "title": "Working Python Example",
+  "validation_duration_seconds": 4.1e-05,
+  "validation_status": "passed",
+  "validation_stderr": "",
+  "validation_stdout": "validation: generic_python OK\n"
+}

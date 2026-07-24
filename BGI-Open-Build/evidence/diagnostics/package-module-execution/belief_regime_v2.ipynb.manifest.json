@@ -1,0 +1,32 @@
+{
+  "classes": [],
+  "concept_confidence": "heuristic",
+  "concept_kind": "array_basics",
+  "execution_attempted": true,
+  "execution_succeeded": false,
+  "functions": [
+    "expected_opportunity_utility",
+    "_observation_likelihoods_v2",
+    "filtered_belief_v2",
+    "predict_belief_v2",
+    "observation_probability_v2",
+    "_case_for_step_v2",
+    "generate_belief_sequence_v2",
+    "generate_belief_dataset_v2"
+  ],
+  "has_main_guard": false,
+  "imports": [
+    "__future__",
+    "typing",
+    "numpy",
+    "belief_regime",
+    "environment"
+  ],
+  "language": "python",
+  "policy_blocked": false,
+  "schema_version": "2",
+  "source_sha256": "19b926183c1497aaad0d6061c5fdd86cd2fe18d3e0b87552391b1a9fb1913d6f",
+  "syntax_ok": true,
+  "timed_out": false,
+  "top_level_statement_count": 21
+}

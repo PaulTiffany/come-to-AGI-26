@@ -1,0 +1,26 @@
+{
+  "classes": [],
+  "concept_confidence": "heuristic",
+  "concept_kind": "array_basics",
+  "execution_attempted": false,
+  "execution_succeeded": false,
+  "functions": [
+    "main"
+  ],
+  "has_main_guard": true,
+  "imports": [
+    "__future__",
+    "sys",
+    "pathlib",
+    "compitum.regret_lab",
+    "compitum.regret_lab.belief_regime",
+    "compitum.regret_lab.simulator"
+  ],
+  "language": "python",
+  "policy_blocked": true,
+  "schema_version": "2",
+  "source_sha256": "df12efdfae7220f0b2eed512c3fe7d67d4b46c4d433e3b37f1265d7c2f7f2ae4",
+  "syntax_ok": true,
+  "timed_out": false,
+  "top_level_statement_count": 19
+}

@@ -1,0 +1,89 @@
+{
+  "schema": "bgi-open-build.evidence-index.v1",
+  "bundle_sha256": "6b48262f49e6cad498a23ff6e075f1f8522e831004f8cb3dbaeecfe46e28dc05",
+  "items": [
+    {
+      "id": "continuation-value",
+      "title": "Continuation value",
+      "claim": "The canonical Bellman continuation value yields its exact marginal resource price.",
+      "kind": "Notebook Compiler certificate",
+      "policy_ok": true,
+      "source_ran": true,
+      "notebook_ran": true,
+      "validation_passed": true,
+      "source_sha256": "824ae6809aec9b1978f0a311d70b2eb078afec48618cf9b81ac1f044bb405442",
+      "notebook_sha256": "09e6fcf5bdbe239b040eaf09bf3aa54fa7f0ff6614f9f3ef68d2f31eb054f094",
+      "links": {
+        "notebook": "notebooks/01_continuation_value.ipynb",
+        "certificate": "notebooks/01_continuation_value.ipynb.certificate.json",
+        "audit": "notebooks/01_continuation_value.ipynb.audit.json",
+        "manifest": "notebooks/01_continuation_value.ipynb.manifest.json",
+        "source": "local_sources/01_continuation_value.py"
+      }
+    },
+    {
+      "id": "discrete-shadow-charge",
+      "title": "Discrete action shadow charge",
+      "claim": "Summed discrete unit prices telescope to the exact two-value-lookup action charge.",
+      "kind": "Notebook Compiler certificate",
+      "policy_ok": true,
+      "source_ran": true,
+      "notebook_ran": true,
+      "validation_passed": true,
+      "source_sha256": "abee4e7b437ca67346ba5ad2a5d6427d78471f70a40c4b7ad67bf540d3551f05",
+      "notebook_sha256": "fdc090b857c6859606a92694bd466f9363a6d51ce9ec1a80bb56dc29a9892002",
+      "links": {
+        "notebook": "notebooks/02_discrete_shadow_charge.ipynb",
+        "certificate": "notebooks/02_discrete_shadow_charge.ipynb.certificate.json",
+        "audit": "notebooks/02_discrete_shadow_charge.ipynb.audit.json",
+        "manifest": "notebooks/02_discrete_shadow_charge.ipynb.manifest.json",
+        "source": "local_sources/02_discrete_shadow_charge.py"
+      }
+    },
+    {
+      "id": "online-optimal-equivalence",
+      "title": "Online-optimal equivalence",
+      "claim": "Exact-belief shadow-charge routing matches the exact online optimum in every decision and in cumulative utility.",
+      "kind": "Notebook Compiler certificate",
+      "policy_ok": true,
+      "source_ran": true,
+      "notebook_ran": true,
+      "validation_passed": true,
+      "source_sha256": "75f7e8da581c7ffe124e9fcbfb5083dde800b1f6242e040b076ff667343c56f9",
+      "notebook_sha256": "54d462090252b9b700e5c7ded8b32aee0352bc0b65e0531e07f4eb51965bc288",
+      "links": {
+        "notebook": "notebooks/03_online_optimal_equivalence.ipynb",
+        "certificate": "notebooks/03_online_optimal_equivalence.ipynb.certificate.json",
+        "audit": "notebooks/03_online_optimal_equivalence.ipynb.audit.json",
+        "manifest": "notebooks/03_online_optimal_equivalence.ipynb.manifest.json",
+        "source": "local_sources/03_online_optimal_equivalence.py"
+      }
+    },
+    {
+      "id": "belief-sensitive-boundary",
+      "title": "Belief-sensitive boundary",
+      "claim": "Low and high beliefs cross a genuine interior Bellman-optimal action boundary.",
+      "kind": "Notebook Compiler certificate",
+      "policy_ok": true,
+      "source_ran": true,
+      "notebook_ran": true,
+      "validation_passed": true,
+      "source_sha256": "6bd2ca914aa1d6f4f1ffdba9daf90099a3d0054c677bbf444b228a6ca5d7b370",
+      "notebook_sha256": "42ff134eb26317a2bbe1706c8148eff01689a80728c5b56720d75183225917a2",
+      "links": {
+        "notebook": "notebooks/04_belief_sensitive_boundary.ipynb",
+        "certificate": "notebooks/04_belief_sensitive_boundary.ipynb.certificate.json",
+        "audit": "notebooks/04_belief_sensitive_boundary.ipynb.audit.json",
+        "manifest": "notebooks/04_belief_sensitive_boundary.ipynb.manifest.json",
+        "source": "local_sources/04_belief_sensitive_boundary.py"
+      }
+    }
+  ],
+  "provenance": {
+    "compitum_submission_branch": "submission/bellman-shadow-pricing",
+    "compitum_submission_commit": "d4c0bbd103849b8afb1019921684a062482d08cc",
+    "research_tag": "fabricpc-compitum-shadow-pricing-v1",
+    "research_commit": "617f8979daa921d326301266e55740c0746ab95c",
+    "fabricpc_commit": "32ae295182ab944b8f084abaf4a40da2c50bab5f"
+  }
+}

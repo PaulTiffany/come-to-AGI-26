@@ -1,0 +1,21 @@
+{
+  "ai_used": false,
+  "concept_confidence": "heuristic",
+  "concept_kind": "generic_python",
+  "concept_title": "Working Python Example",
+  "input_sha256": "824ae6809aec9b1978f0a311d70b2eb078afec48618cf9b81ac1f044bb405442",
+  "notebook_ran": true,
+  "notebook_sha256": "09e6fcf5bdbe239b040eaf09bf3aa54fa7f0ff6614f9f3ef68d2f31eb054f094",
+  "policy_added_import_prefixes": [
+    "compitum"
+  ],
+  "policy_allowed_imports": [
+    "compitum"
+  ],
+  "policy_blocked_imports": [],
+  "policy_ok": true,
+  "schema_version": "1",
+  "signed_at": "2026-07-24T10:35:26.054544+00:00",
+  "source_ran": true,
+  "validation_passed": true
+}

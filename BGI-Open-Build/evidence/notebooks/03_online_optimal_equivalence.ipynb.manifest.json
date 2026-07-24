@@ -1,0 +1,24 @@
+{
+  "classes": [],
+  "concept_confidence": "heuristic",
+  "concept_kind": "array_basics",
+  "execution_attempted": true,
+  "execution_succeeded": true,
+  "functions": [],
+  "has_main_guard": false,
+  "imports": [
+    "numpy",
+    "compitum.regret_lab.belief_action_pricing",
+    "compitum.regret_lab.belief_bellman",
+    "compitum.regret_lab.belief_online_optimum",
+    "compitum.regret_lab.belief_pricing",
+    "compitum.regret_lab.belief_regime"
+  ],
+  "language": "python",
+  "policy_blocked": false,
+  "schema_version": "2",
+  "source_sha256": "75f7e8da581c7ffe124e9fcbfb5083dde800b1f6242e040b076ff667343c56f9",
+  "syntax_ok": true,
+  "timed_out": false,
+  "top_level_statement_count": 24
+}

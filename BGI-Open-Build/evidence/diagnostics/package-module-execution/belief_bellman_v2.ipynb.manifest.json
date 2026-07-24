@@ -1,0 +1,26 @@
+{
+  "classes": [
+    "BellmanStateBudgetExceeded",
+    "BeliefSensitiveBellmanOracle"
+  ],
+  "concept_confidence": "heuristic",
+  "concept_kind": "generic_python",
+  "execution_attempted": true,
+  "execution_succeeded": false,
+  "functions": [],
+  "has_main_guard": false,
+  "imports": [
+    "__future__",
+    "dataclasses",
+    "typing",
+    "belief_regime",
+    "belief_regime_v2"
+  ],
+  "language": "python",
+  "policy_blocked": false,
+  "schema_version": "2",
+  "source_sha256": "0e99ae2dfd796b1d682853083843736807fff9bf306c15200845711518855a50",
+  "syntax_ok": true,
+  "timed_out": false,
+  "top_level_statement_count": 9
+}
