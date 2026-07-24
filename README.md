@@ -9,7 +9,7 @@
   &nbsp;|&nbsp;
   <a href="https://github.com/PaulTiffany/Come"><strong>Companion pipeline</strong></a>
   &nbsp;|&nbsp;
-  <a href="https://github.com/PaulTiffany/sketched"><strong>Hackathon app</strong></a>
+  <a href="BGI-Open-Build/"><strong>BGI Open Build</strong></a>
   &nbsp;|&nbsp;
   <a href="tour/"><strong>Tour</strong></a>
   &nbsp;|&nbsp;
@@ -18,4 +18,4 @@
   <a href="https://paultiffany.github.io/"><strong>About the author</strong></a>
 </p>
 
-<p align="center"><sub>Paper (AGI-26, Springer LNAI) and rebuttal materials — links added once public.</sub></p>
+<p align="center"><sub>Paper (AGI-26, Springer LNAI), poster, certified research build, and public companion materials.</sub></p>
