@@ -1,0 +1,60 @@
+name: Remove OmegaClaw docent
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/remove-omegaclaw-docent.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  remove:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Remove the public chat and its links
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import shutil
+
+          root = Path("index.html")
+          root_text = root.read_text(encoding="utf-8")
+          root_text = root_text.replace(
+              "The Hypothesis Surface — AGI-26. Published paper, poster, official archived materials, companion pipeline, BGI Open Build, tour, and OmegaClaw channel.",
+              "The Hypothesis Surface — AGI-26. Published paper, poster, official archived materials, companion pipeline, BGI Open Build, and tour.",
+          )
+          root_text = root_text.replace(
+              '      <a href="tour/">Tour</a> &middot;\n      <a href="chat/">OmegaClaw channel</a> &middot;\n      <a href="https://paultiffany.github.io/">About the author</a>',
+              '      <a href="tour/">Tour</a> &middot;\n      <a href="https://paultiffany.github.io/">About the author</a>',
+          )
+          root.write_text(root_text, encoding="utf-8")
+
+          tour = Path("tour/index.html")
+          tour_text = tour.read_text(encoding="utf-8")
+          tour_text = tour_text.replace(' or <a href="../chat/">ask OmegaClaw</a>', '')
+          tour_text = tour_text.replace(' &middot;\n      <a href="../chat/">ask OmegaClaw</a>', '')
+          tour.write_text(tour_text, encoding="utf-8")
+
+          shutil.rmtree("chat", ignore_errors=True)
+          Path(".github/workflows/remove-omegaclaw-docent.yml").unlink()
+
+          remaining = []
+          for path in (root, tour):
+              text = path.read_text(encoding="utf-8")
+              if 'href="chat/' in text or 'href="../chat/' in text or "OmegaClaw channel" in text or "ask OmegaClaw" in text:
+                  remaining.append(str(path))
+          if remaining:
+              raise SystemExit("OmegaClaw chat references remain in: " + ", ".join(remaining))
+          PY
+
+      - name: Commit removal
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Remove the OmegaClaw docent chat"
+          git push
